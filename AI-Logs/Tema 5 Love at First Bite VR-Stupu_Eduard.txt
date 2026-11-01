@@ -1,0 +1,348 @@
+﻿Tema 5 Love at First Bite VR
+https://gemini.google.com/app/06013c5e91321bb2
+
+
+User prompt: Aici ai tema 4: Love at First Bite VR A high-stakes, comedic VR cooking simulator where you have 10 minutes to multitask a gourmet meal in a cramped student dorm kitchen before your crush arrives—ending with a  kiss if you succeed, or a slap in the face if you burn dinner Team members: Stupu Eduard-Stefan, Tarca Catalin, Sescu Tiberiu, Firtescu Sebastian, Gheoca Razvan Description 1. Many university students living in dorms rely on repetitive, basic meals and feel intimidated when trying to cook an impressive, multi-part dish for someone special. While watching a 60-second recipe video on TikTok makes cooking look easy, real-world cooking fails because beginners lack spatial coordination, timing, and heat management when multiple burners are running at once. This app exists to give students a safe, zero-cost, and wildly entertaining environment to build kitchen confidence and multitasking muscle memory without wasting expensive ingredients or setting off the dorm smoke alarm. 1. Using the Meta Quest 2, the player steps into a cramped 3D dorm kitchen with a strict 10-minute countdown timer triggered by a text from their crush. To succeed, the player must physically grab, chop, season, and stagger the cooking times of a three-part meal (such as pan-seared steak, sautéed sides, and garlic bread) across multiple heat sources so everything finishes hot at the same time. At the end of the timer, the crush NPC walks into the room in 1:1 scale to inspect the kitchen and taste the food, rewarding a well-cooked meal with a  kiss on the cheek, or punishing burnt food and a smoky room with a sharp haptic slap. 1. Most VR games force a choice between dry educational training and pure arcade chaos. Love at First Bite VR stands out by grounding its mechanics in a highly relatable student scenario (hosting a date in a tiny dorm) and leveraging VR's unique sense of personal space—both through one-handed phone-texting distractions mid-cook and an unforgettable face-to-face NPC ending that makes players laugh out loud while genuinely improving their kitchen coordination.  Similar products & Relevant Links(>=3) Cooking Simulator VR https://store.steampowered.com/app/1358140/Cooking_Simulator_VR/ Relevant Features - (Physics & Prep): 1:1 physical VR knife slicing, utensil grabbing, and realistic pan-flipping kinematics. - (Thermal States): Dynamic ingredient state transitions (raw seared burnt) based on stove burner temperature and exposure time. - (Kitchen Hazards): Interactive kitchen fire hazards and destructible environment elements when heat sources are neglected. Clash of Chefs VR (by Flat Hill Games) https://www.meta.com/experiences/clash-of-chefs-vr/3230671513714717/ Relevant Features - (Time Pressure): Fast-paced countdown timers that force the player to juggle multiple cooking stations simultaneously under pressure. - (Order Evaluation): Instant visual scoring and expressive NPC customer reactions based on how fast and accurately the plate is served. - (Spatial Layout): U-shaped counter ergonomics designed specifically for Meta Quest room-scale turning and quick reachability. Lost Recipes (by Schell Games) https://www.meta.com/experiences/lost-recipes/4584847304916084/ Relevant Features - (Educational Transfer): Designed to teach real-world transferable cooking techniques and heat control rather than chaotic food-throwing. - (Step-by-Step Guidance): Diegetic in-world recipe guidance and instant feedback from a virtual host/mentor NPC right in front of the counter. - (Authentic Mechanics): Realistic pouring, basting, and stove temperature management optimized for standalone Meta Quest headsets. ------------------------------------------------------------------------------------- Main Features  PRINCIPAL MAIN VERY IMPORTANT FEATURE: - Real-time multitasking and heat management simulation.The core gameplay forces players to physically coordinate prepping, seasoning, and staggering the cooking times of a three-part meal across multiple heat sources so all components finish simultaneously.  Other features: - Interactive Physics-Based Cooking: Players must physically grab, chop, and season ingredients in 3D space rather than just pressing buttons.  - Distraction & Time Management: The core cooking loop is interrupted by a strict 10-minute countdown timer and mid-cook, one-handed phone-texting distractions.  - NPC Evaluation & Haptic Consequences: A 1:1 scale NPC enters at the end to inspect the food and kitchen, triggering either an affectionate reward or a "sharp haptic slap" for burnt food and a smoky room.  - Environmental Simulation: The game takes place in a cramped dorm kitchen, forcing players to navigate and manage a realistically limited workspace without setting off the smoke alarm.  User Journey Diagram - Step by step flow through app Moodboard (10+ images) Un moodboard este un “board” cu imagini care ne ofera inspiratie vizuala, de la culori, stil vizual, texturi, etc.  ------------------------------------------------------------------------------------->> Technologies, Libraries, Assets (cu linkuri) (>=5) 1. Unity Engine (Unity 6 LTS): Core game engine used for the 3D dorm kitchen scene, physics simulation (PhysX), the 10-minute countdown logic, and the cooking state system (raw → cooked → burnt). 2. https://unity.com 3. Meta XR All-in-One SDK: Integration with Meta Quest 2, including headset and controller tracking, grab interactions, haptic feedback (for the final “slap” reaction), and Android/Quest build support. 4. https://developers.meta.com/horizon/ 5. Unity XR Interaction Toolkit: Provides grabbable objects (knife, pan, seasoning), socket snapping to counters and burners, and base VR interaction components. 6. https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@latest 7. Blender: 3D modeling and asset editing for the dorm kitchen, utensils, and food in multiple states (raw, cooked, burnt). 8. https://www.blender.org 9. Mixamo (Adobe): Character rigging and animations for the crush NPC (entering the room, inspecting the kitchen, reacting to the meal). 10. https://www.mixamo.com 11. Sketchfab: Source of free, Creative Commons-licensed 3D models such as stoves, pots, pans, and furniture, used with proper attribution. 12. https://sketchfab.com 13. Freesound: Sound effects library for sizzling, chopping, the smoke alarm, and phone message notifications. 14. https://freesound.org 15. Unity Particle System / VFX Graph: Visual effects for fire, smoke, and steam, which feed into the smoke-alarm and burnt-kitchen mechanics. 16. https://docs.unity3d.com/Manual/ParticleSystems.html Acum trb sa fac tema 5: <APP NAME> - ONE SENTENCE DESCRIPTION - (In cele ce urmează, considerați versiunea ideală a aplicației pe care doriți să o implementați. Cât la sută va fi și implementat până la finalul semestrului rămâne de văzut mai târziu.) User Story Map (2p) Enumerati si detaliati informatii despre fiecare componenta principala a aplicatiei. Incercati sa acoperiti toate cazurile posibile. 1. Utilizator 1 Utilizatorul aplicației mele este….  1. Goal 1. Acesta isi doreste / are nevoie sa…. 1. Activitate 1. Pentru asta, în aplicația noastra, el va putea sa … 1. Feature 1. 2. Feature 2. 3. Feature 3. 2. Activitate 2. Apoi va…. 1. Feature 1. 2. Feature 2. 3. Feature 3. 2. Goal 2. Acesta isi doreste / are nevoie sa…. 3. …  2. (eventual) Utilizator 2  … Utilizatorul aplicației mele este….  Journey Map (2p) Bazat pe punctul anterior, creati cate un journey map pentru fiecare tip de utilizare al aplicației.  Daca sunt prea multe astfel de Journey Maps de care este nevoie, sau daca un astfel de flow este prea complex, poate este un semn ca aplicatia poate fi simplificata. (Exemplu atasat) Wireframing/Storyboarding (3p) Bazându-vă pe user flow-urile principale ale aplicației, vizualizați momentele cheie ale aplicației și urcațile în acest document. Puteți folosi tool-uri precum hand-drawn sketches, Figma, Excalidraw, Canva, Moqups, AI-generated images. (exemplu atasat) Este foarte important ca totul sa fie foarte abstract/sketched-up, pentru că la acest pas nu ne interesează deciziile de design ale aplicației. Important este ca în timp cât mai scurt să decidem punctele cheie din flow-ul vizual al aplicației. Planning Asset Creation(3p) Enumerati componentelele de care veti avea nevoie in cadrul aplicatiei, astfel:  - Subliniati(CTRL+U) materialele pe care planuiti sa le creati de la zero (modelare, scanare 3D, inregistrare sunete etc) - folositi un highlight galben pentru obiectele pe care le veti genera (scanare 3D, genAI tools etc) - scrieti sursele de unde planuiti sa le luati pe celelalte (links) Fiți cât se poate de detaliați, această listă reprezentând practic un checklist pentru voi. 3D (Unity Asset Store, fab.com, sketchfab, TurboSquid, CGTrader…) - Instrument 1   (Modelat) - Instrument 2  (AI Generated) - Masa (Sketchfab/Asset Store Link: … ) - Statuia lui Eminescu (Scanat 3D - … Graphics & 2D - UI ecrane  (Design propriu) - Avatar personaj 1 (AI generated) - Icon arma (Link…) Sounds (freesound.org, elevenlabs, …) - Muzica fundal happy (Link…) - Muzica boss fight - Sunet click - … VFX - Explozie (Design propriu) - Foc 1(Link: ..) Alte asseturi - Link 1:  - Link 2: EU trebuie sa fac Doar User Story. Zi 3 optiuni din care sa aleg pentru FIECARE chestie pe care trebuie sa o scriu. Urmeaza cu strictete aceste indicatii ale profesorului: Hello, back with next Homework: Complete the following document (again, copy it, link it inside your Git Repo). The goal for last week was to understand your app as a whole. This week's goal is to understand your app in a SPECIFIC manner. What exactly can we do in it? Step by step. Element by element. Try be as specific as possible (while not overexplaining). Focus mainly on the things that will happen in what you identified as being the most important feature of your app. Also, la ora trecuta ne a zis ca la noi ar trebui sa alegem sa zicem niste mancaruri, dar nu nus ce minunatii, ptc daca scriem in docs asta, atunci se asteapta de la noi sa facem. Si daca am vrea sa facem nus ce mancare dar nu e sigur, sa zicem explicit ca e posibil dar nu sigur
+Response: Salut! Este un proiect excelent pentru curs, mai ales că folosești Unity și VR (XR Interaction Toolkit) pe care le stăpânești bine, iar scenariul de cămin studențesc (probabil inspirat și de experiența de la FII/Tudor) oferă o bază narativă foarte amuzantă și clară.
+Am ținut cont cu strictețe de cerința profesorului tău: să fii specific, să te concentrezi pe mecanica principală (multitasking / managementul căldurii) și să reduci așteptările legate de complexitatea mâncărurilor, menționând clar ce este fezabil și ce este doar un plan "nice-to-have" ca să nu vă asumați riscuri inutile la notare.
+Pentru fiecare element din șablonul profesorului, ai mai jos 3 opțiuni din care poți alege ce se potrivește cel mai bine cu viziunea echipei. Alege câte o variantă din fiecare secțiune pentru a asambla documentul final.
+Tema 5: Love at First Bite VR
+- ONE SENTENCE DESCRIPTION -
+* Opțiunea 1 (Focus pe mecanică și scenariu): Un simulator VR de gătit contratimp, în care ai la dispoziție 10 minute pentru a coordona prepararea unei mese pe o plită înghesuită de cămin, înainte să ajungă persoana de care îți place.
+* Opțiunea 2 (Focus pe umor și consecințe): O experiență VR haotică de time-management unde trebuie să gătești simultan mai multe ingrediente sub presiunea timpului și a mesajelor pe telefon, finalul aducându-ți o recompensă sau o palmă virtuală.
+* Opțiunea 3 (Scurt și la obiect): Un joc VR de gătit sub presiune în care trebuie să jonglezi cu managementul focului, distracțiile și fizica obiectelor pentru a impresiona un NPC la finalul celor 10 minute.
+User Story Map
+1. Utilizator 1
+* Opțiunea 1: Utilizatorul aplicației mele este un student care locuiește la cămin și vrea să experimenteze, într-un mediu sigur și amuzant, stresul gătitului sub presiune spațială și temporală.
+* Opțiunea 2: Utilizatorul aplicației mele este un jucător pasionat de experiențe VR casual/simulator, interesat de interacțiuni fizice cu obiecte și mecanici de multitasking.
+* Opțiunea 3: Utilizatorul aplicației mele este un începător absolut în bucătărie care dorește să își antreneze coordonarea și atenția distributivă într-un mod comic și lipsit de riscuri reale.
+1. Goal 1. Acesta își dorește / are nevoie să...
+* Opțiunea 1: ...să pregătească o masă simplă la tigaie (ex: ochiuri cu cârnați sau bacon) jonglând cu 2 surse de căldură. (Notă: Este posibil să extindem meniul la o friptură cu legume sauté, dar nu este garantat până la finalul semestrului pentru a evita suprasolicitarea sistemului de fizică).
+* Opțiunea 2: ...să gătească componentele unei cine rapide (ex: paste simple și o felie de pâine prăjită) în cele 10 minute, asigurându-se că nu dă foc bucătăriei. (Notă: Rețeta finală va conține doar modele 3D solide și statice pentru a facilita detectarea stării de gătire; simularea de lichide/supe este exclusă).
+* Opțiunea 3: ...să supraviețuiască celor 10 minute de joc preparând un fel de bază (ex: burger simplu asamblat), fără să declanșeze alarma de fum. (Notă: Complexitatea vizuală a mâncării va fi limitată la capacitățile tehnice de bază ale Unity, adăugarea de meniuri gourmet rămânând un stretch goal).
+1.1. Activitate 1. Pentru asta, în aplicația noastră, el va putea să manipuleze ingredientele crude în spațiul 3D.
+* Feature 1 (Prindere/Interacțiune):
+   * Opțiunea 1: Folosirea controllerelor VR (XR Interaction Toolkit) pentru a prinde direct (Grab) ingredientele, cuțitul și tigaia de pe blatul înghesuit.
+   * Opțiunea 2: Ridicarea obiectelor cu mâinile virtuale dintr-un mini-frigider și fixarea (Snap) ustensilelor în sloturi specifice pentru a salva spațiu.
+   * Opțiunea 3: Sistem fizic prin care jucătorul poate arunca ingredientele crude direct în tigaie sau pe tocător.
+* Feature 2 (Procesare preliminară):
+   * Opțiunea 1: Tăierea ingredientelor solide prin coliziunea lamei cuțitului cu modelul 3D (schimbarea modelului din "întreg" în "tăiat").
+   * Opțiunea 2: Aplicarea de condimente prin mișcarea (scuturarea) fizică a recipientului deasupra alimentelor.
+   * Opțiunea 3: Așezarea elementelor tăiate în containere intermediare (boluri) pentru a elibera blatul de lucru.
+* Feature 3 (Start-ul Gătirii):
+   * Opțiunea 1: Plasarea fizică a tigăii pe un ochi de plită pentru a iniția procesul termic.
+   * Opțiunea 2: Apăsarea fizică a unui buton/knob pe aragaz care activează trigger-ul de încălzire pentru coliderul plitei.
+   * Opțiunea 3: Mutarea ingredientului în aria de coliziune a plitei, declanșând cronometrul intern de stare (raw).
+1.2. Activitate 2. Apoi va gestiona multitasking-ul termic și sursele de foc, aceasta fiind mecanica principală (core feature).
+* Feature 1 (Schimbarea de stare termică):
+   * Opțiunea 1: Tranziția materialului 3D al ingredientului pe bază de timp (de la textura de crud -> la gătit -> la ars) cât timp stă pe zona de căldură.
+   * Opțiunea 2: Un sistem vizual prin particule (abur urmat de fum) care să îi indice jucătorului când trebuie să ia tigaia de pe foc.
+   * Opțiunea 3: O mecanică simplă în care jucătorul trebuie să ia alimentul de pe foc exact în fereastra de "bine-făcut" (ex: între secunda 30 și 40).
+* Feature 2 (Hazard Management / Pericole):
+   * Opțiunea 1: Declanșarea unei alarme vizuale și sonore dacă starea alimentului ajunge la "Ars" (Burnt).
+   * Opțiunea 2: Spawnarea unui "Particle System" de foc pe plită dacă un obiect complet ars este lăsat prea mult timp nesupravegheat.
+   * Opțiunea 3: Posibilitatea de a reseta progresul de ardere pe o față a alimentului folosind mecanica de întoarcere (flip) cu spatula sau din tigaie.
+* Feature 3 (Distragerea atenției):
+   * Opțiunea 1: Apariția telefonului virtual cu vibrații (prin Haptics) care cere atenția jucătorului (forțându-l să folosească o singură mână pentru gătit momentan).
+   * Opțiunea 2: Prezența unui cronometru central imens și stresant care arată exact minutele rămase până ajunge NPC-ul.
+   * Opțiunea 3: Sunete ambientale de cămin (bate cineva la ușă, muzică de pe hol) menite să complice concentrarea asupra sunetului de "sfarâit" al mâncării.
+2. Goal 2. Acesta își dorește / are nevoie să...
+* Opțiunea 1: ...finalizeze nivelul servind mâncarea și primind evaluarea din partea NPC-ului în scala 1:1.
+* Opțiunea 2: ...scape de stresul presiunii timpului prin așezarea preparatului final pe farfurie înainte să sune timer-ul.
+* Opțiunea 3: ...experimenteze latura narativă a jocului aflând consecința acțiunilor sale (kiss sau slap) din partea personajului.
+2.1. Activitate 1. Pentru asta, în aplicația noastră, el va putea să asambleze preparatul.
+* Feature 1: Un sistem de coliziune (Snap Drop Zone) deasupra unei farfurii care combină ingredientele gătite într-un preparat final.
+* Feature 2: Oprirea mecanică a timer-ului de ardere din momentul în care ingredientele părăsesc tigaia/plita și ajung pe masă.
+* Feature 3: O condiție logică care verifică starea (crud/gătit/ars) a fiecărui obiect așezat pe farfurie.
+2.2 Activitate 2. Apoi va asista la cinematica/reacția finală de evaluare.
+* Feature 1: Spawn-area / intrarea în cameră a modelului 3D animat al NPC-ului (Mixamo) exact când cronometrul de 10 minute expiră.
+* Feature 2: Calcularea unui scor binar în backend pe baza stării ingredientelor (Gătit ok = Succes; Oricare crud/ars = Fail).
+* Feature 3: Rularea animației și trigger-ului Haptic în funcție de scor (o animație de apreciere vs. animație de palmă însoțită de o vibrație puternică în cască/controllere).
+2. (eventual) Utilizator 2 (Notă: Profesorul a sugerat că acest utilizator este opțional, deci e bine să îl treci doar dacă aplicația vă permite)
+* Opțiunea 1 (Jucătorul Haotic): Utilizatorul 2 este un "Troll", care își dorește doar să testeze limitele fizicii, aruncând obiecte și dând foc intenționat bucătăriei pentru a vedea feedback-ul (fum, alarmă de incendiu, NPC furios).
+* Opțiunea 2 (Jucătorul Performant): Utilizatorul 2 este tipul "Speedrunner", care își dorește să optimizeze complet spațiul și timpii de gătire pentru a termina farfuria perfectă mult mai repede de cele 10 minute alocate.
+* Opțiunea 3 (Nu adăuga Utilizatorul 2): Scrie pur și simplu: "Din dorința de a menține scope-ul fezabil pentru un proiect de semestru, flow-ul este construit exclusiv în jurul unui singur tip de utilizator (Studentul stresat/Jucătorul de simulator). Nu vizăm momentan un Utilizator 2." (Aceasta este adesea o decizie inteligentă care denotă realism în planificarea proiectelor software/jocurilor studențești).
+Sfaturi extra pentru nota maximă pe document:
+* Acolo unde îți alegi opțiunea, folosește copy-paste direct pe formatul lui, fără să lași cuvinte ca "Opțiunea X".
+* Faptul că insiști, ca disclaimer, asupra faptului că rețetele vor fi simple (ex: fără ciorbe dinamice sau 30 de pași, ci obiecte care trec din stare=0 în stare=1 la contact cu sursa de căldură) te salvează de penalizări la final, arătând că ai înțeles limitările sistemelor physics în VR.
+* La secțiunea cu modelare 3D / resurse vizuale din a doua parte a documentului, nu uita să adaugi link-uri reale așa cum a cerut, direct din Sketchfab sau Unity Asset Store.
+Spor la scris! Proiectul promite foarte mult, ideea e foarte curată și realizabilă cu instrumentele alese.
+________________
+
+
+User prompt: in engleza tot
+Response: Here is the User Story Map strictly translated into English, maintaining the 3 options for every single required element so you can mix and match to build your final document. I have also kept the disclaimers about keeping the food simulation feasible, as your professor advised.
+- ONE SENTENCE DESCRIPTION -
+* Option 1 (Focus on mechanics and setting): A high-stakes VR cooking simulator where you have 10 minutes to coordinate preparing a meal on a cramped dorm stove before your crush arrives.
+* Option 2 (Focus on humor and consequences): A chaotic time-management VR experience where you must simultaneously cook multiple ingredients under the pressure of a timer and text messages, ending in a romantic reward or a virtual slap.
+* Option 3 (Short and direct): A pressure-cooker VR game where you juggle heat management, distractions, and physics to impress an NPC at the end of a strict 10-minute countdown.
+User Story Map
+1. User 1
+* Option 1: The user of my app is a student living in a dorm who wants to experience, in a safe and humorous environment, the stress of spatial and time-pressured cooking.
+* Option 2: The user of my app is a gamer passionate about VR casual/simulator experiences, interested in physical object interactions and multitasking mechanics.
+* Option 3: The user of my app is an absolute beginner in the kitchen who wants to train their coordination and split attention in a comical, risk-free way.
+1. Goal 1. This user wants / needs to...
+* Option 1: ...prepare a simple pan-cooked meal (e.g., fried eggs and sausage) juggling 2 heat sources. (Note: We might extend the menu to steak and sautéed veggies, but this is not guaranteed by the end of the semester to avoid physics engine overload).
+* Option 2: ...cook the components of a quick dinner (e.g., simple pasta and a slice of toast) within 10 minutes, making sure not to set the kitchen on fire. (Note: The final recipe will only contain solid, static 3D models to easily detect cooking states; fluid/soup simulation is strictly excluded).
+* Option 3: ...survive the 10 minutes of gameplay by preparing a basic dish (e.g., an assembled burger), without triggering the smoke alarm. (Note: The visual complexity of the food will be limited to Unity's basic technical capabilities; gourmet menus remain a stretch goal).
+1.1. Activity 1. For this, in our app, he will be able to... manipulate raw ingredients in 3D space.
+* Feature 1 (Grabbing/Interaction):
+   * Option 1: Use VR controllers (XR Interaction Toolkit) to directly grab (Grab Interactable) ingredients, the knife, and the pan from the cramped countertop.
+   * Option 2: Pick up objects with virtual hands from a mini-fridge and snap utensils into specific slots (Socket Interactors) to save space.
+   * Option 3: Use a physics-based system where the player can throw raw ingredients directly into the pan or onto the cutting board.
+* Feature 2 (Prep work):
+   * Option 1: Cut solid ingredients through the collision of the knife blade with the 3D model (swapping the model from "whole" to "sliced").
+   * Option 2: Apply seasonings by physically shaking the spice container over the food.
+   * Option 3: Place chopped items into intermediate containers (bowls) to clear up the limited workspace.
+* Feature 3 (Starting the cooking process):
+   * Option 1: Physically place the pan on a stove burner to initiate the thermal process.
+   * Option 2: Physically press a button/knob on the stove which activates the heating trigger for the burner's collider.
+   * Option 3: Move the ingredient into the stove's collision area, triggering the internal state timer (raw).
+1.2. Activity 2. Then he will... manage thermal multitasking and heat sources (this being the core feature).
+* Feature 1 (Thermal state change):
+   * Option 1: Transition the 3D material of the ingredient based on time (from raw texture -> cooked -> burnt) as long as it stays on the active heat zone.
+   * Option 2: A visual system using particles (steam followed by smoke) that indicates to the player when to remove the pan from the heat.
+   * Option 3: A simple mechanic where the player must remove the food from the heat exactly within the "well-done" window (e.g., between second 30 and 40).
+* Feature 2 (Hazard Management):
+   * Option 1: Trigger a visual and auditory smoke alarm if the food's state reaches "Burnt".
+   * Option 2: Spawn a fire Particle System on the stove if a completely burnt object is left unattended for too long.
+   * Option 3: The ability to reset the burning progress on one side of the food using a flip mechanic with a spatula or by tossing it from the pan.
+* Feature 3 (Distractions):
+   * Option 1: The appearance of a virtual phone with vibrations (via Haptics) demanding the player's attention (forcing them to cook one-handed momentarily).
+   * Option 2: A huge, stressful central timer showing exactly how many minutes are left until the NPC arrives.
+   * Option 3: Ambient dorm sounds (someone knocking on the door, loud music from the hallway) designed to break the player's concentration on the "sizzling" audio cues of the food.
+2. Goal 2. This user wants / needs to...
+* Option 1: ...finish the level by serving the food and receiving the 1:1 scale NPC's evaluation.
+* Option 2: ...escape the time pressure by plating the final dish before the timer rings.
+* Option 3: ...experience the narrative side of the game by facing the consequence of their actions (kiss or slap) from the crush character.
+2.1. Activity 1. For this, in our app, he will be able to... assemble the final dish.
+* Feature 1: A collision system (Snap Drop Zone) above a plate that combines the cooked ingredients into a final meal representation.
+* Feature 2: Mechanically stopping the burning timer the moment ingredients leave the pan/stove and land on the plate.
+* Feature 3: A logic condition that checks and stores the state (raw/cooked/burnt) of each object placed on the plate for the final score.
+2.2 Activity 2. Then he will... witness the final evaluation cinematic/reaction.
+* Feature 1: Spawn / trigger the entrance of the animated 3D NPC model (Mixamo) exactly when the 10-minute timer expires.
+* Feature 2: Calculate a binary backend score based on the ingredients' states (Cooked ok = Success; Any raw/burnt = Fail).
+* Feature 3: Play the animation and trigger haptics based on the score (an appreciative kiss animation vs. a slap animation accompanied by a strong headset/controller vibration).
+2. (optional) User 2
+* Option 1 (The Chaotic Player): User 2 is a "Troll" who just wants to test the limits of physics, throwing objects and intentionally setting the kitchen on fire to see the feedback (smoke, fire alarm, angry NPC).
+* Option 2 (The Speedrunner): User 2 is a "Speedrunner" who wants to completely optimize the space and cooking times to finish the perfect plate much faster than the allocated 10 minutes.
+* Option 3 (Skip User 2): To keep the scope feasible for a semester project, the flow is built exclusively around a single user type (The Stressed Student / Simulator Gamer). We are not targeting a User 2 at this time.
+________________
+
+
+User prompt: A chaotic time-management VR experience where you must simultaneously cook multiple ingredients under the pressure of a timer and text messages, ending in a romantic reward or Zi altceva mai general after or
+Response: Here are a few more general options to replace "a virtual slap", depending on the exact vibe you want to go for:
+Option 1 (Focus on the NPC's reaction): "...ending in a romantic reward or a harsh rejection."
+Option 2 (Focus on the humor and chaos): "...ending in a romantic reward or a hilarious disaster."
+Option 3 (Focus on the gameplay outcome): "...ending in a romantic reward or an embarrassing failure."
+Option 4 (Keeps the idea of a consequence, but less specific than a slap): "...ending in a romantic reward or a comical punishment."
+So the full sentence would look like this (using Option 2, for example): A chaotic time-management VR experience where you must simultaneously cook multiple ingredients under the pressure of a timer and text messages, ending in a romantic reward or a hilarious disaster.
+________________
+
+
+User prompt: User Story Map (2p) Enumerati si detaliati informatii despre fiecare componenta principala a aplicatiei. Incercati sa acoperiti toate cazurile posibile. 1. Utilizator 1 Utilizatorul aplicației mele este….  1. Goal 1. Acesta isi doreste / are nevoie sa…. 1. Activitate 1. Pentru asta, în aplicația noastra, el va putea sa … 1. Feature 1. 2. Feature 2. 3. Feature 3. 2. Activitate 2. Apoi va…. 1. Feature 1. 2. Feature 2. 3. Feature 3. 2. Goal 2. Acesta isi doreste / are nevoie sa…. 3. …  2. (eventual) Utilizator 2  … Utilizatorul aplicației mele este….  da in romana raspunsul
+Response: 1. Utilizator 1
+Utilizatorul aplicației mele este...
+* Opțiunea 1: ...un student care locuiește la cămin și vrea să experimenteze, într-un mediu sigur și amuzant, stresul gătitului sub presiune spațială și temporală.
+* Opțiunea 2: ...un jucător pasionat de experiențe VR casual/simulator, interesat de interacțiuni fizice cu obiecte și mecanici de multitasking.
+* Opțiunea 3: ...un începător absolut în bucătărie care dorește să își antreneze coordonarea și atenția distributivă într-un mod comic și lipsit de riscuri reale.
+1. Goal 1. Acesta își dorește / are nevoie să...
+* Opțiunea 1: ...pregătească o masă simplă la tigaie (ex: ochiuri cu bacon) jonglând cu 2 surse de foc. (Notă: Extinderea la rețete complexe depinde de limitările motorului de fizică).
+* Opțiunea 2: ...gătească componentele unei cine rapide în cele 10 minute, asigurându-se că nu dă foc bucătăriei. (Notă: Rețeta va conține modele 3D statice pentru detectarea ușoară a stării de gătire).
+* Opțiunea 3: ...supraviețuiască celor 10 minute de joc preparând un fel de mâncare de bază, fără să declanșeze alarma de fum din cauza multitasking-ului eșuat.
+1.1. Activitate 1. Pentru asta, în aplicația noastră, el va putea să... manipuleze ingredientele crude în spațiul 3D.
+* Feature 1 (Prindere/Interacțiune):
+   * Opțiunea 1: Folosirea controllerelor VR (XR Interaction Toolkit) pentru a prinde direct (Grab) ingredientele, cuțitul și tigaia.
+   * Opțiunea 2: Ridicarea obiectelor cu mâinile virtuale și fixarea ustensilelor în sloturi specifice (Snap Drop Zones) pentru a salva spațiu pe blat.
+   * Opțiunea 3: Un sistem bazat pe fizică prin care jucătorul poate arunca ingredientele direct pe tocător sau în tigaie.
+* Feature 2 (Procesare preliminară):
+   * Opțiunea 1: Tăierea ingredientelor prin coliziunea lamei cuțitului cu modelul 3D (schimbarea modelului din "întreg" în "tăiat").
+   * Opțiunea 2: Aplicarea de condimente prin scuturarea fizică a recipientului deasupra alimentelor.
+   * Opțiunea 3: Organizarea elementelor în containere intermediare (boluri) pentru a elibera zona de lucru foarte restrânsă.
+* Feature 3 (Start-ul Gătirii):
+   * Opțiunea 1: Plasarea fizică a tigăii pe un ochi de plită pentru a iniția procesul termic.
+   * Opțiunea 2: Apăsarea unui buton sau rotirea unui knob de pe aragaz care activează trigger-ul de încălzire pentru coliderul plitei.
+   * Opțiunea 3: Mutarea ingredientului în aria de coliziune a plitei, declanșând cronometrul intern de schimbare a stării.
+1.2. Activitate 2. Apoi va... gestiona multitasking-ul termic și sursele de foc (mecanica principală).
+* Feature 1 (Schimbarea de stare termică):
+   * Opțiunea 1: Tranziția materialului 3D al ingredientului pe bază de timp (crud -> gătit -> ars) cât timp stă pe sursa de căldură activă.
+   * Opțiunea 2: Un sistem vizual (particule de abur urmate de fum) care să îi indice jucătorului momentul optim pentru a lua tigaia de pe foc.
+   * Opțiunea 3: O mecanică în care alimentul trebuie luat de pe foc exact într-o fereastră specifică de timp (ex: între secunda 30 și 40).
+* Feature 2 (Hazard Management / Pericole):
+   * Opțiunea 1: Declanșarea unei alarme vizuale și sonore (alarma de fum) dacă starea alimentului ajunge la stadiul "Ars".
+   * Opțiunea 2: Spawnarea unui sistem de particule de foc pe plită dacă un obiect complet ars este lăsat prea mult timp nesupravegheat.
+   * Opțiunea 3: Posibilitatea de a reseta progresul de ardere pe o parte a alimentului folosind mecanica de întoarcere (flip cu spatula/tigaia).
+* Feature 3 (Distragerea atenției):
+   * Opțiunea 1: Apariția unui telefon virtual care vibrează (Haptics) și cere atenția jucătorului, forțându-l să lucreze temporar cu o singură mână.
+   * Opțiunea 2: Un cronometru central imens și vizibil care arată exact minutele rămase, adăugând presiune constantă.
+   * Opțiunea 3: Sunete ambientale (bătăi în ușă, zgomot de pe hol) care maschează intenționat indiciile sonore ale gătirii (sfârâitul tigăii).
+2. Goal 2. Acesta își dorește / are nevoie să...
+* Opțiunea 1: ...finalizeze nivelul servind mâncarea și primind evaluarea finală din partea NPC-ului (la scară 1:1).
+* Opțiunea 2: ...scape de stresul presiunii timpului prin asamblarea completă a preparatului pe farfurie înainte de expirarea cronometrului.
+* Opțiunea 3: ...experimenteze finalul jocului și să afle consecința acțiunilor sale (o recompensă romantică sau un dezastru comic).
+2.1. Activitate 1. Pentru asta, în aplicația noastră, el va putea să... asambleze preparatul final.
+* Feature 1: Un sistem de coliziune (Snap Zone) deasupra unei farfurii care fixează ingredientele gătite pe poziție.
+* Feature 2: Oprirea mecanică a timer-ului de ardere din momentul în care ingredientele ajung în zona de servire.
+* Feature 3: O logică de backend care verifică și salvează starea (crud/gătit/ars) a fiecărui obiect așezat pe farfurie pentru calcularea scorului final.
+2.2. Activitate 2. Apoi va... asista la reacția NPC-ului și deznodământul jocului.
+* Feature 1: Apariția în scenă a modelului 3D animat al personajului așteptat exact la expirarea celor 10 minute.
+* Feature 2: Calcularea unui scor binar pe baza stării ingredientelor (Totul gătit ok = Succes; Orice componentă crudă/arsă = Fail).
+* Feature 3: Rularea animației finale și declanșarea feedback-ului Haptic în funcție de scor (animație de apreciere vs. respingere/dezastru comic acompaniat de o vibrație puternică în controllere).
+3. (eventual) Utilizator 2
+Utilizatorul aplicației mele este...
+* Opțiunea 1 (Jucătorul Haotic): ...un jucător de tip "Troll", care vrea doar să testeze limitele fizicii VR, aruncând obiecte și declanșând intenționat haos (fum, incendiu, reacția furioasă a NPC-ului).
+* Opțiunea 2 (Jucătorul de Performanță): ...un "Speedrunner" care dorește să optimizeze complet spațiul și timpii de gătire pentru a termina farfuria perfectă mult mai rapid decât cele 10 minute alocate.
+* Opțiunea 3 (Fără Utilizator 2): (Scrieți direct în document pentru a seta așteptări realiste) "Pentru a menține un scope fezabil al proiectului de semestru, flow-ul este construit exclusiv în jurul unui singur tip de utilizator (Studentul stresat / Simulator gamer). Nu vizăm implementarea unui Utilizator 2."
+________________
+
+
+User prompt: 1. Goal 1. Acesta își dorește / are nevoie să... - Opțiunea 1: ...să pregătească o masă simplă la tigaie (ex: ochiuri cu cârnați sau bacon) jonglând cu 2 surse de căldură. (Notă: Este posibil să extindem meniul la o friptură cu legume sauté, dar nu este garantat până la finalul semestrului pentru a evita suprasolicitarea sistemului de fizică). - Opțiunea 2: ...să gătească componentele unei cine rapide (ex: paste simple și o felie de pâine prăjită) în cele 10 minute, asigurându-se că nu dă foc bucătăriei. (Notă: Rețeta finală va conține doar modele 3D solide și statice pentru a facilita detectarea stării de gătire; simularea de lichide/supe este exclusă). - Opțiunea 3: ...să supraviețuiască celor 10 minute de joc preparând un fel de bază (ex: burger simplu asamblat), fără să declanșeze alarma de fum. (Notă: Complexitatea vizuală a mâncării va fi limitată la capacitățile tehnice de bază ale Unity, adăugarea de meniuri gourmet rămânând un stretch goal). Esti prost? Ii fac un burger la cina lui crush ul meu?? Prost rau
+Response: Ai dreptate, my bad — ochiuri cu cârnați sau un burger obosit la un date sună a restanță la romantism. Am tras prea mult în jos pe „ușor de programat în Unity” și am uitat complet că tu încerci să impresionezi o fată, nu să hrănești colegul de cameră la 3 dimineața.
+Ideea e să sune a cină romantică pe care un student chiar ar încerca să o gătească ca să pară chef, dar care tehnic (pentru voi în Unity) să însemne tot obiecte 3D solide puse în tigaie (fără fluide complexe, sosuri vărsate sau 500 de poligoane de tăiat).
+Uite 3 opțiuni refăcute pentru Goal 1, care păstrează vibe-ul de date real, dar vă protejează și la cod:
+1. Goal 1. Acesta își dorește / are nevoie să...
+* Opțiunea 1 (Clasicul "Date Night" – Friptură cu garnitură): ...gătească o cină impresionantă formată dintr-o friptură la tigaie (pan-seared steak) și sparanghel/ciuperci sotate, jonglând simultan cu două surse de căldură fără să ardă bucătăria. (Notă tehnică: Ne concentrăm sigur pe friptură și o garnitură solidă pentru că sunt ușor de gestionat ca stări 3D în Unity; este posibil să adăugăm și pâine cu usturoi ca al treilea element, dar nu este sigur, depinzând de timpul rămas pentru integrarea fizicii).
+* Opțiunea 2 (Vibe mai fancy/ușor – Somon la tigaie): ...pregătească în 10 minute un meniu de restaurant în condiții de cămin — de exemplu, file de somon la tigaie alături de legume la grătar (ardei/dovlecei) — sincronizând timpii de gătire astfel încât ambele să fie gata și calde în același timp. (Notă: Vom implementa sigur tranzițiile termice pentru pește și legume; adăugarea unui sos turnat fizic peste farfurie este o posibilitate pe care o luăm în calcul, dar nu este garantată din cauza complexității simulării lichidelor în VR).
+* Opțiunea 3 (Piept de rață sau pui rumenit + cartofi): ...coordoneze prepararea unei mese calde cu două-trei componente (ex: piept de pui/rață rumenit la tigaie și rondele de cartofi rumeniți), gestionând temperatura plitei și tăiatul ingredientelor sub presiunea timpului. (Notă: Implementarea de bază va conține sigur carnea și o garnitură solidă; extinderea la un meniu complet cu 3 preparate simultane sau desert este posibilă ca stretch goal, dar nu este sigură până la finalul semestrului).
+De ce sunt bune astea pentru prof:
+1. Pentru poveste: Friptura (steak), somonul sau pieptul de rață cu sparanghel/ciuperci sunt exact genul de mâncare pe care o vezi pe TikTok în clipuri de 60 de secunde și zici „mamă, ce ușor e, îi fac asta diseară”, și apoi umpli căminul de fum (exact cum ai scris în Descriere la Tema 4).
+2. Pentru voi la cod: O bucată de steak, un file de somon sau o tulpină de sparanghel sunt literalmente același lucru în Unity ca un cârnat sau un burger: un singur Mesh cu un Box Collider și un script care îi schimbă materialul din roz în maro și apoi în negru. Doar că în document sună de 10 ori mai bine.
+________________
+
+
+User prompt: vreau sa poata aleaga (Posibil daca mai e timp la final ori friptura cu ciuperci ori somon si ce ai mai zis tu (si gen asta sa fie mai greu) gen pt friptura sa trb 2 ochiuri aprinse in acelasi timp dar pentru somon si ce mai e sa trb 3
+Response: Iată 3 opțiuni pentru Goal 1 care includ exact mecanica asta de alegere a meniului ca selector de dificultate (2 ochiuri vs. 3 ochiuri), cu disclaimer-ul cerut de profesor pus direct în text:
+1. Goal 1. Acesta își dorește / are nevoie să...
+* Opțiunea 1 (Focus pe scalarea dificultății prin numărul de tigăi): ...gătească o cină impresionantă de „date night” fără să declanșeze alarma de fum, având ca obiectiv de bază prepararea unei fripturi la tigaie (pan-seared steak) cu ciuperci sotate, ceea ce necesită coordonarea simultană a 2 ochiuri de aragaz. (Notă: Dacă timpul ne permite la final, este posibil — dar nu sigur — să adăugăm opțiunea ca jucătorul să își aleagă la început un meniu mai complex, precum file de somon cu sparanghel și pâine cu usturoi, care va crește dificultatea prin gestionarea simultană a 3 ochiuri de plită).
+* Opțiunea 2 (Focus pe alegerea rețetei și timpii de gătire): ...sincronizeze timpii de preparare ai unei mese romantice în cele 10 minute, începând cu meniul standard format din friptură de vită și ciuperci la tigaie (multitasking pe 2 surse de căldură). (Notă: Ca funcționalitate opțională — posibilă, dar nu garantată până la finalul semestrului — dorim să lăsăm jucătorul să aleagă înainte de rundă un al doilea meniu mai pretențios, ex: somon la tigaie, legume la grătar și garnitură caldă, care îl va forța să jongleze cu 3 ochiuri aprinse în același timp).
+* Opțiunea 3 (Scurt, tehnic și direct pe cerința profului): ...impresioneze NPC-ul gătind contratimp un preparat de restaurant în condiții de cămin: rețeta principală (sigură) va fi friptură cu ciuperci sotate (necesitând 2 ochiuri active simultan). (Notă: Este posibil, dar nu sigur, să implementăm un sistem de selecție a rețetei la start, unde jucătorul poate opta pentru o variantă Hard Mode — somon cu legume și pâine prăjită/usturoi — ce implică atenție distributivă pe 3 ochiuri de plită simultan și timpi de ardere mai rapizi).
+Dacă vrei să o treci și în engleză în document (cum era Tema 4), iată traducerile:
+* Option 1: ...cook an impressive date-night dinner without setting off the smoke alarm, with the core objective of preparing a pan-seared steak with sautéed mushrooms, requiring simultaneous coordination across 2 stove burners. (Note: Time permitting, it is possible—though not guaranteed—that we will allow the player to choose a harder menu at the start, such as pan-seared salmon with asparagus and garlic bread, which increases difficulty by requiring 3 active burners at the same time).
+* Option 2: ...synchronize the cooking times of a romantic meal within 10 minutes, featuring the base menu of beef steak and pan-fried mushrooms (multitasking across 2 heat sources). (Note: As a possible but unconfirmed stretch goal, we plan to let players select a second, harder recipe—such as salmon, grilled veggies, and a warm side—forcing them to juggle 3 lit burners simultaneously).
+* Option 3: ...impress the crush NPC by cooking a restaurant-grade meal in a dorm kitchen: the guaranteed base recipe is steak with sautéed mushrooms (2 active burners). (Note: It is possible, though not certain, that we will implement recipe selection at the start, featuring a Hard Mode option—salmon with veggies and garlic bread—which demands managing 3 burners at once with stricter burn timers).
+________________
+
+
+User prompt: 1. Utilizator 1 Utilizatorul aplicației mele este un jucător pasionat de experiențe VR casual/simulator, interesat de interacțiuni fizice cu obiecte și mecanici de multitasking.   1. Goal 1. Acesta isi doreste / are nevoie sa gătească o cină impresionantă de „date night” fără să declanșeze alarma de fum, având ca obiectiv de bază prepararea unei fripturi la tigaie cu ciuperci sotate, ceea ce necesită coordonarea simultană a 2 ochiuri de aragaz. (Notă: Dacă timpul ne permite la final, este posibil să adăugăm opțiunea ca jucătorul să își aleagă la început un meniu mai complex, precum file de somon cu sparanghel și pâine cu usturoi, care va crește dificultatea prin gestionarea simultană a 3 ochiuri de plită).  1. Activitate 1. Pentru asta, în aplicația noastra, el va putea sa … 1. Feature 1. 2. Feature 2. 3. Feature 3. 2. Activitate 2. Apoi va…. 1. Feature 1. 2. Feature 2. 3. Feature 3. 2. Goal 2. Acesta isi doreste / are nevoie sa…. 3. …  2. (eventual) Utilizator 2  … Utilizatorul aplicației mele este…. zi in rest cu ce sa mai completez. si inainte de asta vreau sa mi zici ca e doable sa fac aia cu somon (gen in unity si ce mai e
+Response: Este 100% doable în Unity, iar secretul este că nu trebuie să scrii nici măcar o linie de cod în plus pentru somon.
+Din punct de vedere arhitectural în Unity, între friptura cu ciuperci (2 ochiuri) și somonul cu sparanghel și pâine cu usturoi (3 ochiuri) nu există nicio diferență de logică:
+1. Un singur script generic (CookableItem.cs): Îl pui pe un prefab gol. Scriptul are 3 variabile: float timeToCook, float timeToBurn și o referință către MeshRenderer (sau 3 modele 3D copil: Raw, Cooked, Burnt pe care le activezi/dezactivezi cu SetActive()).
+2. Somonul = Friptura cu alte cifre: Pentru friptură pui timeToCook = 40f. Pentru somon pui pe același script timeToCook = 25f și timeToBurn = 35f (pentru că peștele se arde mai repede în realitate, deci iată Hard Mode-ul tău gata făcut din Inspector).
+3. Al 3-lea ochi de plită: Este literalmente Ctrl+D (Duplicate) la unul dintre primele două ochiuri de pe aragaz. Are același BoxCollider cu isTrigger = true care verifică OnTriggerStay dacă ai o tigaie pe el.
+4. Pâinea cu usturoi și sparanghelul: Nu necesită mecanică de tăiere dacă nu vrei să te complici (sparanghelul se pune întreg în tigaie, iar pâinea vine deja feliată). Deci doar le iei cu XR Grab Interactable și le pui în tigaie.
+Practic, odată ce îți merge friptura, somonul îți ia fix 15 minute să îl implementezi (doar tragi alte modele 3D de pe Sketchfab în prefab-uri).
+Mai jos ai restul documentului completat cu câte 3 opțiuni pentru fiecare secțiune rămasă, adaptate exact pe friptură/ciuperci (și somon opțional), ca să faci direct copy-paste:
+1.1. Activitate 1. Pentru asta, în aplicația noastră, el va putea să...
+* Opțiunea 1: ...pregătească fizic ingredientele crude (friptura, ciupercile sau opțional somonul/sparanghelul) și să inițieze gătitul pe plită.
+* Opțiunea 2: ...manipuleze ustensilele și alimentele în spațiul 3D restrâns al căminului pentru a le pregăti de prăjit.
+* Opțiunea 3: ...interacționeze direct cu ingredientele de pe blat și să pornească sursele de căldură necesare rețetei alese.
+* Feature 1 (Manipulare VR & Prep):
+   * Opțiunea 1: Prinderea fizică (folosind XR Grab Interactable) a ingredientelor din mini-frigider, a tigăilor și a cuțitului, cu posibilitatea de a le plasa pe tocător.
+   * Opțiunea 2: Tăierea ciupercilor pe tocător prin coliziunea fizică cu lama cuțitului (înlocuirea mesh-ului de ciupercă întreagă cu cel de ciuperci feliate).
+   * Opțiunea 3: Condimentarea cărnii (friptură/somon) prin scuturarea fizică a solniței deasupra preparatului (detectată prin velocity pe controller și un mic Particle System de sare/piper).
+* Feature 2 (Managementul spațiului și al tigăilor):
+   * Opțiunea 1: Fixarea tigăilor pe cele 2 (sau 3) ochiuri de plită prin zone de tip XRSocketInteractor pentru a evita răsturnarea lor accidentală din cauza fizicii.
+   * Opțiunea 2: Plasarea fizică a bucății de friptură și a ciupercilor tăiate în tigăi separate, obiectele atașându-se de fundul tigăii la contact.
+   * Opțiunea 3: Folosirea unor boluri intermediare pe blat pentru a elibera tocătorul după ce ciupercile au fost feliate.
+* Feature 3 (Activarea surselor de căldură):
+   * Opțiunea 1: Rotirea sau apăsarea butoanelor (knobs) de la aragaz pentru a activa individual cele 2 sau 3 ochiuri de plită.
+   * Opțiunea 2: Declanșarea automată a cronometrului intern de gătire în momentul în care o tigaie cu ingrediente se află pe un ochi de plită activ.
+   * Opțiunea 3: Feedback vizual pe plită (înroșirea rezistenței electrice sau apariția flăcării) și auditiv (sunet de sfârâit) imediat ce carnea atinge tigaia încinsă.
+1.2. Activitate 2. Apoi va...
+* Opțiunea 1: ...gestiona în timp real temperaturile și timpii diferiți de gătire pe cele 2-3 ochiuri, în timp ce face față distragerilor (Core Feature).
+* Opțiunea 2: ...coordona simultan prăjirea fripturii și a garniturii astfel încât ambele să fie gata în același timp, fără să declanșeze alarma de fum.
+* Opțiunea 3: ...supraveghea tranziția termică a mâncării pe foc, împărțindu-și atenția între aragaz, telefonul care sună și cronometrul general.
+* Feature 1 (Simularea stărilor termice și sincronizarea):
+   * Opțiunea 1: Schimbarea progresivă a materialului/texturii ingredientelor în funcție de timpul petrecut pe foc (Raw -> Seared/Cooked -> Burnt), ciupercile și somonul având timpi de ardere mai rapizi decât friptura de vită.
+   * Opțiunea 2: Mecanica de întoarcere a fripturii/somonului cu spatula (sau prin aruncare din tigaie) pentru a găti uniform ambele părți și a reseta timer-ul de ardere.
+   * Opțiunea 3: Indiciu vizual dinamic prin Particle System: abur alb când mâncarea se gătește corect, care devine fum negru și dens când se apropie de starea Burnt.
+* Feature 2 (Controlul pericolelor / Bucătăria de cămin):
+   * *Opțiunea 1:*Acumularea de fum în cameră dacă o tigaie este uitată pe foc, ceea ce declanșează alarma de incendiu din cămin (sunet strident + lumină roșie intermitentă).
+   * Opțiunea 2: Oprirea imediată a procesului de gătire/ardere atunci când jucătorul ia fizic tigaia de pe ochiul încins sau stinge aragazul.
+   * Opțiunea 3: Posibilitatea de a arunca la gunoi un ingredient ars și de a lua altul crud din frigider, cu prețul pierderii timpului rămas din cele 10 minute.
+* Feature 3 (Distrageri și presiunea timpului):
+   * Opțiunea 1: Vibrații haptice în controller și notificări sonore pe un telefon virtual pe care jucătorul trebuie să îl ia în mână pentru a citi/răspunde la mesajele de la „crush”, forțându-l să gătească cu o singură mână.
+   * Opțiunea 2: Un ceas digital vizibil pe peretele bucătăriei care numără invers cele 10 minute și își schimbă culoarea (sau ticăie mai tare) în ultimul minut.
+   * Opțiunea 3: Evenimente de distragere a atenției specifice vieții la cămin (bătăi în ușă de la colegi, notificări neprevăzute) care acoperă sunetul tigăii când mâncarea începe să se ardă.
+2. Goal 2. Acesta își dorește / are nevoie să...
+* Opțiunea 1: ...asambleze estetic preparatele gătite pe farfurie înainte de expirarea timpului și să primească reacția pozitivă a NPC-ului (sau pedeapsa comică în caz de eșec).
+* Opțiunea 2: ...finalizeze cina prin plating-ul tuturor componentelor rețetei și să treacă de evaluarea finală face-to-face cu personajul virtual.
+* Opțiunea 3: ...servească masa caldă și completă la secunda 00:00 pentru a obține finalul romantic (kiss) și a evita palma virtuală (haptic slap).
+2.1. Activitate 1. Pentru asta, în aplicația noastră, el va putea să...
+* Opțiunea 1: ...transfere mâncarea din tigăi pe farfuria de servire pentru a forma preparatul final.
+* Opțiunea 2: ...realizeze plating-ul cinei în zona dedicată de pe masă înainte să intre NPC-ul pe ușă.
+* Opțiunea 3: ...combine componentele gătite separat (carnea și garniturile) pe o singură farfurie de prezentare.
+* Feature 1 (Plating & Snap Zones):
+   * Opțiunea 1: Folosirea unor zone de tip Snap Drop Zone pe farfurie care atrag și poziționează automat friptura și ciupercile (sau somonul, sparanghelul și pâinea) într-un aranjament curat când sunt apropiate de farfurie.
+   * Opțiunea 2: Transferul fizic al alimentelor din tigaie pe farfurie folosind spatula sau prin înclinarea tigăii deasupra mesei.
+   * Opțiunea 3: Blocarea stării termice a ingredientului (înghețarea scriptului de gătire) în secunda în care acesta este înregistrat pe farfurie.
+* Feature 2 (Validarea rețetei):
+   * Opțiunea 1: Un script de verificare pe farfurie (PlateEvaluator) care detectează dacă toate componentele rețetei alese sunt prezente (ex: lipsește garnitura = penalizare).
+   * Opțiunea 2: Citirea stării fiecărui obiect de pe farfurie (Raw, Cooked, Burnt) și stocarea rezultatelor pentru momentul evaluării.
+   * Opțiunea 3: Un mic indicator vizual (ex: abur discret de mâncare caldă) care confirmă jucătorului că farfuria este completă și gata de servit.
+* Feature 3 (Finalizarea înainte de limită):
+   * Opțiunea 1: Un clopoțel de servire pe blat pe care jucătorul îl poate apăsa fizic dacă termină de gătit mai devreme de cele 10 minute, sărind direct la sosirea NPC-ului.
+   * Opțiunea 2: Oprirea automată a interacțiunilor cu aragazul și ingredientele în momentul în care cronometrul ajunge la 00:00.
+   * Opțiunea 3: Verificarea stării ambientale a camerei la finalul timpului (dacă alarma de fum este încă activă sau există foc pe plită în momentul în care intră NPC-ul).
+2.2. Activitate 2. Apoi va...
+* Opțiunea 1: ...asista la intrarea în cameră a NPC-ului la scară 1:1 și va experimenta consecința vizuală și haptică a modului în care a gătit.
+* Opțiunea 2: ...primi evaluarea finală din partea „crush-ului” direct în spațiul său personal VR.
+* Opțiunea 3: ...vedea deznodământul întâlnirii, declanșat automat pe baza calității mâncării de pe farfurie și a stării bucătăriei.
+* Feature 1 (Secvența de intrare a NPC-ului):
+   * Opțiunea 1: Deschiderea ușii căminului și intrarea unui personaj 3D la scară 1:1 (animat cu Mixamo), care merge până în fața jucătorului și privește farfuria.
+   * Opțiunea 2: Orientarea dinamică a privirii/capului NPC-ului către farfurie și apoi către ochii jucătorului (camera VR) pentru a crea tensiune.
+   * Opțiunea 3: Redarea unor replici audio sau reacții vocale ale NPC-ului în funcție de ce găsește în cameră (tușit dacă e fum, încântare dacă miroase bine).
+* Feature 2 (Reacția la mâncare și Feedback Haptic):
+   * Opțiunea 1: Dacă friptura și ciupercile sunt Cooked și nu e fum: rularea animației de „kiss on the cheek” (NPC-ul se apropie de camera VR) însoțită de un sunet pozitiv și o vibrație haptică blândă.
+   * Opțiunea 2: Dacă mâncarea este Burnt/Raw sau bucătăria e plină de fum: rularea animației de „slap” spre fața jucătorului, sincronizată cu un impuls haptic scurt și puternic în ambele controllere și un efect sonor de palmă.
+   * Opțiunea 3: Un al treilea caz intermediar (ex: friptura e bună, dar ciupercile sunt arse): o animație de dezamăgire/oftat din partea NPC-ului, fără palmă, dar și fără sărut.
+* Feature 3 (Ecranul de final / Replayability):
+   * Opțiunea 1: Afișarea unui panou UI diegetic (ex: o notă de plată sau un mesaj pe telefonul virtual) cu rezumatul rundei: starea fiecărui ingredient, timpul rămas și deznodământul obținut.
+   * Opțiunea 2: Butoane fizice sau UI în VR pentru Restart Level (pentru a încerca din nou) sau Change Menu (pentru a trece la rețeta grea cu somon pe 3 ochiuri).
+   * Opțiunea 3: Tranziție vizuală (fade-to-black sau efect de ecran roșu la palmă) care încheie runda într-o notă comică.
+2. (eventual) Utilizator 2
+* Opțiunea 1 (Jucătorul Haotic / „Sandbox”): Utilizatorul aplicației mele este un jucător care intră în VR strict pentru umor și fizică, dorind să testeze ce se întâmplă dacă sabotează intenționat întâlnirea (arde totul pe toate cele 3 ochiuri simultan, aruncă friptura pe jos sau îi pune NPC-ului pe farfurie mâncare complet crudă ori arsă doar ca să declanșeze alarma de incendiu și animația de „slap”).
+* Opțiunea 2 (Jucătorul Competitiv / „Perfecționistul”): Utilizatorul aplicației mele este un jucător orientat spre provocări de tip time-management (stil Overcooked), care alege direct meniul dificil (somon, sparanghel și pâine cu usturoi pe 3 ochiuri) și vrea să își optimizeze mișcările în VR pentru a servi o farfurie 100% gătită corect în timp record, fără să ignore niciun mesaj pe telefon.
+* Opțiunea 3 (Dacă vrei să nu vă complicați cu un al doilea Journey Map mai jos în temă): Notă: Pentru a menține arhitectura aplicației curată și concentrată pe mecanica principală de multitasking termic în timpul semestrului, aplicația este proiectată în jurul unui singur profil principal de utilizator (Jucătorul de VR Simulator descris mai sus), diferențierea făcându-se prin opțiunea de dificultate a meniului (2 vs. 3 ochiuri de plită), nu prin roluri diferite de utilizator.
+________________
+
+
+User prompt: Mai am si c ...
+Response: Acel c. ... din șablonul profesorului reprezintă pur și simplu Goal 3 (pentru că lista lui este formatată cu a. Goal 1, b. Goal 2, c. ...).
+Ai două variante:
+1. Îl ștergi de tot (în șablonul original scrie 3. ... doar ca să îți arate că poți continua lista dacă aplicația ta are mai mult de 2 obiective principale).
+2. Îl transformi în c. Goal 3 ca să arate documentul super complet. Dacă vrei să-l păstrezi și să-l completezi fără să vă dați de lucru în plus la cod, cel mai inteligent este să legi Goal 3 de managementul crizei / curățeniei și al distragerilor din cămin (sau de rejucabilitate/alegerea meniului).
+Uite 3 opțiuni complete pentru c. Goal 3 (cu tot cu Activități și Features bazate pe ce aveți deja în plan), din care poți face copy-paste direct în locul acelor puncte:
+Opțiunea 1: Focus pe Managementul Distragerilor și al Pericolelor (Recomandat – se leagă perfect de tema voastră)
+c. Goal 3. Acesta își dorește / are nevoie să gestioneze situațiile de criză din bucătăria înghesuită și distragerile constante (mesajele de la „crush”), fără să piardă controlul asupra tigăilor de pe foc.
+* i. Activitate 1. Pentru asta, în aplicația noastră, el va putea să interacționeze cu telefonul mobil folosind o singură mână în timp ce gătește cu cealaltă.
+   * 1. Ridicarea fizică a telefonului virtual de pe blat atunci când acesta vibrează (Haptic impulse) și redă sunetul de notificare.
+   * 2. Afișarea pe ecranul telefonului a unor mesaje scurte de la NPC (ex: „Ajung în 3 minute, sper că nu ai dat foc la cămin!”) care cresc presiunea psihologică.
+   * 3. Posibilitatea de a apăsa cu degetul/controllerul pe un buton rapid de „Reply” de pe ecranul telefonului pentru a opri notificările stresante.
+* ii. Activitate 2. Apoi va putea să remedieze accidentele din bucătărie înainte de sosirea NPC-ului, pentru a evita eșecul automat.
+   * 1. Luarea rapidă a tigăii fumegânde de pe ochiul încins și oprirea butonului de la aragaz pentru a opri generarea particulelor de fum.
+   * 2. Aruncarea ingredientelor complet arse (Burnt) la coșul de gunoi din colțul bucătăriei și scoaterea unei porții noi din mini-frigider (dacă timpul îi mai permite).
+   * 3. Apăsarea unui buton de aerisire / oprire a alarmei de fum de pe perete pentru a curăța vizual camera înainte ca cronometrul să ajungă la 00:00.
+Opțiunea 2: Focus pe Pregătirea Întâlnirii / Alegerea Dificultății și Rejucabilitate (Super simplu de implementat din UI)
+c. Goal 3. Acesta își dorește / are nevoie să își poată alege provocarea culinară la începutul rundei și să își poată reîncerca norocul rapid după ce primește evaluarea finală (sărutul sau palma).
+* i. Activitate 1. Pentru asta, în aplicația noastră, el va putea să configureze runda înainte de pornirea cronometrului de 10 minute.
+   * 1. Consultarea unei table/rețetar pe peretele bucătăriei care arată clar ingredientele și timpul optim de gătire pentru cina aleasă.
+   * 2. Selectarea meniului de bază (Friptură cu ciuperci – 2 ochiuri de plită) sau, opțional, a meniului avansat (Somon cu sparanghel și pâine cu usturoi – 3 ochiuri de plită).
+   * 3. Declanșarea startului rundei prin ridicarea telefonului la primul mesaj primit de la „crush”, moment în care pornește numărătoarea inversă.
+* ii. Activitate 2. Apoi va putea să analizeze unde a greșit la finalul rundei și să reia jocul.
+   * 1. Vizualizarea unui rezumat post-evaluare care îi arată exact de ce a primit „kiss” sau „slap” (ex: Friptură: Cooked, Ciuperci: Burnt, Cameră: Cu fum).
+   * 2. Interacțiunea cu un buton fizic/UI de Try Again pentru a reseta instantaneu poziția obiectelor și a încerca o coordonare mai bună.
+   * 3. Posibilitatea de a schimba dificultatea/rețeta după o rundă câștigată pentru a testa multitasking-ul pe 3 surse de căldură.
+Opțiunea 3: Focus pe Ergonomia Spațiului Înghesuit de Cămin (Spatial Management)
+c. Goal 3. Acesta își dorește / are nevoie să își organizeze eficient spațiul de lucru extrem de limitat din cămin, astfel încât să nu scape mâncarea pe jos din cauza grabei.
+* i. Activitate 1. Pentru asta, în aplicația noastră, el va putea să folosească fiecare centimetru de pe blatul îngust și să gestioneze coliziunile fizice.
+   * 1. Deschiderea ușii mini-frigiderului pentru a scoate pe rând doar ingredientele de care are nevoie, evitând aglomerarea blatului.
+   * 2. Așezarea cuțitului, a spatulei și a solniței în zone dedicate (Socket Interactors) pentru a nu le lovi accidental cu mâinile virtuale în timpul gătitului.
+   * 3. Penalizarea neatenției spațiale: orice ingredient scăpat pe podeaua căminului devine inutilizabil și trebuie aruncat la gunoi.
+* ii. Activitate 2. Apoi va trebui să mențină zona de servire curată până la expirarea timpului.
+   * 1. Îndepărtarea resturilor (bucăți netăiate sau arse) de lângă farfuria principală înainte de secunda 00:00.
+   * 2. Stivuirea tigăilor folosite pe aragaz sau în chiuvetă după ce mâncarea a fost transferată pe farfurie.
+   * 3. Asigurarea că pe farfuria de servire nu se află ustensile (ex: cuțitul sau spatula uitate pe farfurie), lucru verificat de scriptul PlateEvaluator.
+Un mic detaliu pe care l-am observat în screenshot-ul tău la b. Goal 2 -> ii. Activitate 2: La punctul 2 ai pus: „Acumularea de fum în cameră dacă o tigaie este uitată pe foc, ceea ce declanșează alarma de incendiu din cămin...”. Vezi că asta se întâmplă în timpul gătitului, nu când intră crush-ul în cameră la final. Dacă vrei să sune 100% logic pentru Activitatea 2 (evaluarea finală a crush-ului), poți modifica puțin punctul 2 de acolo în:
+2. Dacă alarma de fum este activă când intră pe ușă: NPC-ul are o animație de tușit/alungat fumul cu mâna înainte să se uite la farfurie, scăzând automat șansele unui final fericit.
+________________
