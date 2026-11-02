@@ -1,0 +1,44 @@
+Write the diagram in Mermaid syntax only. Use `flowchart LR` so that it fits on a normal laptop screen in landscape orientation. Organize the diagram into 5 vertical subgraphs/columns with `direction TB`:
+
+1. Start and setup
+2. Cooking on 3 burners
+3. Phone and multitasking
+4. Smoke and recovery
+5. Plating and final evaluation
+
+Use Romanian labels. Use:
+- rounded nodes for START and final outcomes;
+- rectangles for player actions;
+- diamonds for decisions;
+- short labels, with `<br/>` where needed;
+- DA and NU labels on decision arrows.
+
+Scenario:
+The player selects the difficult menu: salmon, asparagus, and garlic bread. They start a timer, take ingredients and tools, prepare ingredients, place them in pans, and activate 3 stove burners.
+
+The player must monitor all three ingredients. If a phone message appears, they can pick up the phone and choose whether to reply quickly. If they reply, notifications are paused temporarily. If they do not reply, they continue cooking.
+
+The diagram must include these decisions and loops:
+- Are the dishes Cooked?
+  - No: return to monitoring ingredients.
+  - Yes: check for smoke or fire alarm.
+- Is there smoke or an alarm?
+  - No: transfer food to the serving plate.
+  - Yes: turn off stove, remove pan, throw away burnt ingredient, activate ventilation, then check if there is time to remake the ingredient.
+- Is there time to remake the ingredient?
+  - Yes: take a new ingredient from fridge and return to preparation.
+  - No: continue with incomplete plate.
+- PlateEvaluator checks whether salmon, asparagus, and garlic bread are all present and correctly cooked.
+- If the plate is incomplete or incorrectly cooked, check if there is time:
+  - Yes: return to monitoring/cooking.
+  - No: timer expires.
+- If the plate is correct, check whether all phone messages received a Reply:
+  - No: return to phone interaction.
+  - Yes: player presses serving bell.
+- The bell or timer expiration brings the NPC for evaluation.
+- Final decision: is food Cooked, kitchen smoke-free, time good, and all messages handled?
+  - Yes: “SCOR MAXIM – Succes romantic + ranking”.
+  - No: “EȘEC SAU REZULTAT PARȚIAL – Scor redus”.
+
+Do not use classDef, linkStyle, custom CSS, or advanced styling, because the Mermaid Live Editor must parse the code without syntax errors.
+)
