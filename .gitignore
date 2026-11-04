@@ -85,6 +85,10 @@ mono_crash.*
 *.unitypackage.meta
 *.app
 
+# Unity build/player output folders (never ship or commit these)
+*_BackUpThisFolder_ButDontShipItWithYourGame/
+*_BurstDebugInformation_DoNotShip/
+
 # Crashlytics generated file
 crashlytics-build.properties
 
