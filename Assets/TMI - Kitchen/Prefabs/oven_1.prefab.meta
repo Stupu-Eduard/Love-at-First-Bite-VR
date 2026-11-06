@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bed55bbccd34dd845b9319da2a4e27d0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127635
+  packageName: 'Too Many Items: Kitchen Props'
+  packageVersion: 1.0
+  assetPath: Assets/TMI - Kitchen/Prefabs/oven_1.prefab
+  uploadId: 264728

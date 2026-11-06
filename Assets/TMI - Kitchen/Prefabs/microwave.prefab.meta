@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2d4986c0e198a3f479b15bcb1c3a4281
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127635
+  packageName: 'Too Many Items: Kitchen Props'
+  packageVersion: 1.0
+  assetPath: Assets/TMI - Kitchen/Prefabs/microwave.prefab
+  uploadId: 264728

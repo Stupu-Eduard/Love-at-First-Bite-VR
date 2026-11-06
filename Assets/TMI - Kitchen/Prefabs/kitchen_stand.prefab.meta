@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c5e78a669f7936946aa19bff98e30dd5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127635
+  packageName: 'Too Many Items: Kitchen Props'
+  packageVersion: 1.0
+  assetPath: Assets/TMI - Kitchen/Prefabs/kitchen_stand.prefab
+  uploadId: 264728

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 88d1ff51a98f960408bcd880ce72fe38
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127635
+  packageName: 'Too Many Items: Kitchen Props'
+  packageVersion: 1.0
+  assetPath: Assets/TMI - Kitchen/Prefabs/toaster.prefab
+  uploadId: 264728

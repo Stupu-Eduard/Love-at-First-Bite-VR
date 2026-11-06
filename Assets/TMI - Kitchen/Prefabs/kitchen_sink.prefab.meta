@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8094aef0b3dceb349950acdaac1ce18e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127635
+  packageName: 'Too Many Items: Kitchen Props'
+  packageVersion: 1.0
+  assetPath: Assets/TMI - Kitchen/Prefabs/kitchen_sink.prefab
+  uploadId: 264728

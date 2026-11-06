@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bc23d13d1bed5c04da3fcb727c42b626
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127635
+  packageName: 'Too Many Items: Kitchen Props'
+  packageVersion: 1.0
+  assetPath: Assets/TMI - Kitchen/Prefabs/triangle_napkin.prefab
+  uploadId: 264728

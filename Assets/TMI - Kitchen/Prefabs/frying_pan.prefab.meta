@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f22971e93f194c04cb27f8c9aeb70930
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127635
+  packageName: 'Too Many Items: Kitchen Props'
+  packageVersion: 1.0
+  assetPath: Assets/TMI - Kitchen/Prefabs/frying_pan.prefab
+  uploadId: 264728
