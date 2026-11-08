@@ -791,14 +791,14 @@ MonoBehaviour:
   m_MovementType: 0
   m_PredictedVisualsTransform: {fileID: 0}
   m_VelocityDamping: 1
-  m_VelocityScale: 1
+  m_VelocityScale: 0.5
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
   m_SmoothPosition: 0
   m_SmoothPositionAmount: 8
   m_TightenPosition: 0.1
-  m_TrackRotation: 1
+  m_TrackRotation: 0
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
@@ -831,8 +831,8 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
-  m_LimitLinearVelocity: 0
-  m_LimitAngularVelocity: 0
+  m_LimitLinearVelocity: 1
+  m_LimitAngularVelocity: 1
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
 --- !u!59 &300209268
@@ -843,7 +843,7 @@ HingeJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300209265}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 690675164}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 23, z: 6.5}
   m_Axis: {x: 0, y: -1, z: 0}
@@ -863,8 +863,8 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: 1
-    max: 90
+    min: 0
+    max: 82
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -882,7 +882,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300209265}
   serializedVersion: 5
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2186,6 +2186,38 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!1 &690675160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: a837ba11164b29648ab69564de94fa1f, type: 3}
+  m_PrefabInstance: {fileID: 2019316602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &690675164
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690675160}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &724594315
 GameObject:
   m_ObjectHideFlags: 0
@@ -7544,7 +7576,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400002, guid: a837ba11164b29648ab69564de94fa1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2088954039}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: a837ba11164b29648ab69564de94fa1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 690675164}
   m_SourcePrefab: {fileID: 100100000, guid: a837ba11164b29648ab69564de94fa1f, type: 3}
 --- !u!1001 &2059961339
 PrefabInstance:
