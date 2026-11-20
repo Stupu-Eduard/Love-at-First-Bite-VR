@@ -1,7 +1,14 @@
 fileFormatVersion: 2
 guid: 73f243717808b41f8b43bf517d5da7b8
+AssetOrigin:
+  serializedVersion: 1
+  productId: 403436
+  packageName: Ultimate Food Pack - Low Poly 3D Food & Kitchen Assets
+  packageVersion: 1.0
+  assetPath: Assets/Ultimate_Food_Pack/Models/Mushroom_Sliced.obj
+  uploadId: 984106
 ModelImporter:
-  serializedVersion: 24200
+  serializedVersion: 24300
   internalIDToNameTable: []
   externalObjects: {}
   materials:
@@ -9,6 +16,7 @@ ModelImporter:
     materialName: 0
     materialSearch: 1
     materialLocation: 1
+    searchTexturesGlobally: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -30,7 +38,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -108,10 +116,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 403436
-  packageName: Ultimate Food Pack - Low Poly 3D Food & Kitchen Assets
-  packageVersion: 1.0
-  assetPath: Assets/Ultimate_Food_Pack/Models/Mushroom_Sliced.obj
-  uploadId: 984106
