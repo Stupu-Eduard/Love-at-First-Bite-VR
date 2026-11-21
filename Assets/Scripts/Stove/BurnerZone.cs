@@ -7,9 +7,27 @@ using UnityEngine;
 /// </summary>
 public class BurnerZone : MonoBehaviour
 {
+    static readonly List<BurnerZone> s_Active = new List<BurnerZone>();
+
     [SerializeField] Burner m_Burner;
 
+    [Tooltip("Where the base of a pan rests, in the local space of this zone. The default is the height of the burner ring.")]
+    [SerializeField] Vector3 m_RestOffset = new Vector3(0f, -0.016f, 0f);
+
+    /// <summary>All enabled zones in the scene. Used by PanSnap so it does not have to search the scene.</summary>
+    public static IReadOnlyList<BurnerZone> Active => s_Active;
+
     public Burner Burner => m_Burner;
+
+    /// <summary>World position where the center of a pan base should rest on this burner.</summary>
+    public Vector3 RestPosition => transform.TransformPoint(m_RestOffset);
+
+    void OnEnable()
+    {
+        if (!s_Active.Contains(this)) s_Active.Add(this);
+    }
+
+    void OnDisable() => s_Active.Remove(this);
 
     /// <summary>Links the zone to a burner from code (editor builders and tests).</summary>
     public void Bind(Burner burner) => m_Burner = burner;
