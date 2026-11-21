@@ -1,0 +1,18 @@
+{
+  "task_id": "task-realistic-physics-colliders",
+  "task_description": "Make all kitchen objects behave realistically: every solid object has colliders, grabbed objects (pan, knife, plates, pot, ingredients) cannot be pushed through walls/furniture/stove, no visual gaps or overlap bugs, and objects interact with each other without glitches. User is away; decisions are autonomous.",
+  "status": "completed",
+  "feature_order": ["FEAT-001", "FEAT-002", "FEAT-003"],
+  "blocked_reason": null,
+  "verification": {
+    "build": "pass",
+    "tests": "pass",
+    "test_quality": "pass",
+    "summary": "csc compile check: 0 errors for runtime, EditMode and PlayMode sources. PlayMode tests were NOT executed (Unity Editor is open, no batchmode). Scene YAML integrity checked with a python parse (unique fileIDs, components referenced once). Semantic review v1 NEEDS_CHANGES (chair seat step offset, speed clamp, installer, tests), fixed; v2 APPROVED."
+  },
+  "remaining_notes": [
+    "Run the 11 PlayMode tests in the Editor once.",
+    "Check by hand: knife slicing feel with VelocityTracking, walking into a chair, pan snap after hold, held-object lag in a headset.",
+    "Angular velocity of a held object is not clamped."
+  ]
+}

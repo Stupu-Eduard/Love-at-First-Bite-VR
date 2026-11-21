@@ -1,0 +1,21 @@
+{
+  "id": "FEAT-001",
+  "type": "chore",
+  "description": "Environment setup and baseline. There is nothing to install (Unity project, Editor is open so no batchmode). Establish the out-of-Unity compile check and confirm the baseline is green before any change.",
+  "status": "completed",
+  "steps": [
+    "Copy .agents/tasks/task-realistic-physics-colliders/compile_check.ps1 to .agents/tasks/task-fridge-stock-respawn/compile_check.ps1 (keep content, it already points to the project path and Unity 6000.3.25f1 install).",
+    "Extend the copy with a third compile step for editor scripts: compile every .cs under Assets/Editor with -define:UNITY_EDITOR, references = the same engine refs + Unity.XR.Interaction.Toolkit.dll, Unity.XR.CoreUtils.dll + the runtime check dll + Editor\\Data\\Managed\\UnityEditor.dll (the UnityEditor.*Module dlls are in Editor\\Data\\Managed\\UnityEngine). Allow a -SkipEditor switch. The step must still work after Assets/Editor/SetupFridgeStock.cs exists.",
+    "Run the script and record the baseline error count of runtime, EditMode, PlayMode and Editor sources in this feature's findings. If the baseline is not 0 errors, report which errors are pre-existing (do not fix unrelated code) and set the baseline comparison accordingly.",
+    "Note in findings that tests cannot be executed (Unity Editor is open)."
+  ],
+  "acceptance_criteria": [
+    "compile_check.ps1 exists in .agents/tasks/task-fridge-stock-respawn/ and runs to completion",
+    "Baseline result (error counts per assembly) is written in findings"
+  ],
+  "verification": [
+    "powershell -NoProfile -File .agents\\tasks\\task-fridge-stock-respawn\\compile_check.ps1 prints 'TOTAL ERRORS: 0' (or only documented pre-existing errors)"
+  ],
+  "blocked_reason": null,
+  "findings": "Created .agents/tasks/task-fridge-stock-respawn/compile_check.ps1 (copy of the realistic-physics-colliders script plus a 4th step 'editor_check' compiling all Assets/Editor/**/*.cs with -define:UNITY_EDITOR; switches -SkipTests and -SkipEditor). Baseline: runtime 0 errors, PlayMode tests 0, EditMode tests 0, Editor scripts 0 (5 existing editor files) => TOTAL ERRORS: 0. Run with: powershell -NoProfile -ExecutionPolicy Bypass -File .agents\\tasks\\task-fridge-stock-respawn\\compile_check.ps1 (ExecutionPolicy Bypass is REQUIRED, without it the sandbox refuses to run the .ps1). Deviation from the plan: do NOT add Editor\\Data\\Managed\\UnityEditor.dll to the editor refs, because Managed\\UnityEngine\\*.dll (the engine glob) already contains UnityEditor.dll and all UnityEditor.*Module.dll; adding the second copy gives CS0433 duplicate type errors on MenuItem. Editor refs used: engine glob + runtime refs + the runtime check dll + Unity.RenderPipelines.Core.Runtime.dll + Unity.RenderPipelines.Universal.Runtime.dll (needed for SetupWarmLighting). Editor step uses Assets/Editor/**/*.cs via glob, so it will pick up SetupFridgeStock.cs automatically. Tests cannot be executed (Unity Editor is open, no batchmode): only compile checks and YAML integrity checks are possible. No git commit made (git fails under the sandbox, per briefing). Steering note (pan grab distance, S key) is covered by FEAT-004, nothing done for it here."
+}

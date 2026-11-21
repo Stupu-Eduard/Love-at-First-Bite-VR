@@ -163,6 +163,14 @@ pie title Efort estimat
 
 **Done când:** telefonul sună și afișează mesaje, mâncarea arsă produce fum și alarmă, iar aerisirea o oprește.
 
+#### Frigider cu stoc si respawn
+
+- **Ce face:** la start frigiderul are 2 bucati de carne cruda pe prima gratar (raftul de sus) si 4 ciuperci crude pe a doua. Sunt aceleasi ingrediente ca in rest (se pot lua in mana, gati cu `Cookable` si taia cu `Sliceable`).
+- **Respawn:** orice bucata luata (apucata, mutata din loc sau taiata pe loc) reapare dupa 5 secunde exact in acelasi loc. Daca locul este inca ocupat (bucata tinuta pe loc sau pusa inapoi), noua bucata nu apare, deci nu exista duplicate. Logica este in `FridgeStockSlot` (`Assets/Scripts/Fridge`).
+- **Configurare in scena:** deschide `SampleScene` si ruleaza `Tools > Love at First Bite > Setup Fridge Stock`, apoi salveaza scena cu Ctrl+S. Unealta adauga colliderele frigiderului (podea, pereti, 3 rafturi, care lipseau) si 6 obiecte `Slot_*` sub `fridge/FridgeStock`. Poate fi rulata din nou fara duplicate; `Tools > Love at First Bite > Remove Fridge Stock` sterge tot.
+- **Unde se schimba:** raftul fiecarui ingredient si numarul de bucati sunt in `Stock` si `ShelfSurfaceY` din `Assets/Editor/SetupFridgeStock.cs`. Intarzierea de respawn este campul `Respawn Delay` (implicit 5 s) din componenta `FridgeStockSlot` a fiecarui slot.
+- **Pentru taiere:** daca unealta avertizeaza ca mesh-urile nu sunt Read/Write, ruleaza `Tools > Love at First Bite > Make Ingredient Meshes Readable`.
+
 ---
 
 ## 7. Definition of Done (Sprint 2)

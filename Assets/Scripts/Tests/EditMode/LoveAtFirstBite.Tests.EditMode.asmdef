@@ -3,6 +3,7 @@
     "rootNamespace": "",
     "references": [
         "LoveAtFirstBite.Runtime",
+        "Unity.XR.Interaction.Toolkit",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner"
     ],

@@ -59,6 +59,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6452987395473004570, guid: 1c916d98b7c349529febac66b6ca5836, type: 3}
       insertIndex: -1
       addedObject: {fileID: 879009396357989740}
+    - targetCorrespondingSourceObject: {fileID: 6452987395473004570, guid: 1c916d98b7c349529febac66b6ca5836, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4417201395827160318}
   m_SourcePrefab: {fileID: 100100000, guid: 1c916d98b7c349529febac66b6ca5836, type: 3}
 --- !u!23 &7743433024620536260 stripped
 MeshRenderer:
@@ -85,3 +88,17 @@ MonoBehaviour:
   m_Kind: 0
   m_Profile: {fileID: 11400000, guid: 5b82802525f63734d97a2aae3925f1b2, type: 2}
   m_TargetRenderer: {fileID: 7743433024620536260}
+--- !u!114 &4417201395827160318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8103892448992198673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bbe56b96d551f34fbce786d36908e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LoveAtFirstBite.Runtime::LoveAtFirstBite.Slicing.Sliceable
+  maxCuts: 2
+  cutsSoFar: 0
