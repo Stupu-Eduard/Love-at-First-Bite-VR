@@ -1361,10 +1361,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6452987395473004570, guid: 023f177b72514c688d9e09e38b01a330, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 839682770}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 023f177b72514c688d9e09e38b01a330, type: 3}
 --- !u!4 &403189560 stripped
 Transform:
@@ -2247,11 +2244,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6866642295364898587, guid: 19039a4577cb54748807667172c13ca4, type: 3}
   m_PrefabInstance: {fileID: 416193713}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &710568403 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2824538750231192793, guid: 47e22f58c1e244d498ae5f1c1bda7102, type: 3}
-  m_PrefabInstance: {fileID: 1821956372}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &724594315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,8 +2519,6 @@ GameObject:
   - component: {fileID: 787251126}
   - component: {fileID: 787251130}
   - component: {fileID: 787251131}
-  - component: {fileID: 787251132}
-  - component: {fileID: 787251133}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Untagged
@@ -2729,45 +2719,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0049079657, y: 0.034353852, z: 0.22000003}
   m_Center: {x: 0, y: -0.005629599, z: -0.060643315}
---- !u!114 &787251132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787251124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55ad499bf7e50d24baa79d720b946da4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: LoveAtFirstBite.Runtime::LoveAtFirstBite.Slicing.KnifeSlicer
-  requireSwipe: 1
-  minSwipeSpeed: 1.2
-  debugLog: 1
-  bladeNormalAxis: 0
-  cutFaceMaterial: {fileID: 0}
-  separationImpulse: 0.1
---- !u!65 &787251133
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787251124}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.001, y: 0.005, z: 0.1}
-  m_Center: {x: 0, y: -0.021, z: -0.1}
 --- !u!1001 &799604519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2865,11 +2816,6 @@ Transform:
   - {fileID: 910000007}
   m_Father: {fileID: 621462819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &826500442 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6452987395473004570, guid: 7d0d441352464f848b286963f313abfc, type: 3}
-  m_PrefabInstance: {fileID: 2016995555}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,25 +2955,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833899332}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &839682764 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6452987395473004570, guid: 023f177b72514c688d9e09e38b01a330, type: 3}
-  m_PrefabInstance: {fileID: 403189559}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &839682770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839682764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bbe56b96d551f34fbce786d36908e46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: LoveAtFirstBite.Runtime::LoveAtFirstBite.Slicing.Sliceable
-  maxCuts: 8
-  cutsSoFar: 0
 --- !u!1 &910000001
 GameObject:
   m_ObjectHideFlags: 0
@@ -5084,11 +5011,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0058979797, y: 0.0032719346, z: 0.001296733}
   m_Center: {x: 0, y: 5.820766e-11, z: 0.0006483665}
---- !u!1 &1139870318 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6452987395473004570, guid: c5a9e521ee37404488bb7ab030e4a02b, type: 3}
-  m_PrefabInstance: {fileID: 1391544359}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1145680233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5359,11 +5281,6 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
---- !u!1 &1152628013 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6452987395473004570, guid: 1c916d98b7c349529febac66b6ca5836, type: 3}
-  m_PrefabInstance: {fileID: 1380109961}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1194601803
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,30 +5942,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6452987395473004570, guid: 1c916d98b7c349529febac66b6ca5836, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1380109968}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c916d98b7c349529febac66b6ca5836, type: 3}
 --- !u!4 &1380109962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5964539918679900832, guid: 1c916d98b7c349529febac66b6ca5836, type: 3}
   m_PrefabInstance: {fileID: 1380109961}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1380109968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1152628013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bbe56b96d551f34fbce786d36908e46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: LoveAtFirstBite.Runtime::LoveAtFirstBite.Slicing.Sliceable
-  maxCuts: 8
-  cutsSoFar: 0
 --- !u!4 &1381499806 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8880288759058717355, guid: 633841e866e90cc44adb78e8182b913a, type: 3}
@@ -6109,30 +6009,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6452987395473004570, guid: c5a9e521ee37404488bb7ab030e4a02b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1391544366}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5a9e521ee37404488bb7ab030e4a02b, type: 3}
 --- !u!4 &1391544360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5964539918679900832, guid: c5a9e521ee37404488bb7ab030e4a02b, type: 3}
   m_PrefabInstance: {fileID: 1391544359}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1391544366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139870318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bbe56b96d551f34fbce786d36908e46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: LoveAtFirstBite.Runtime::LoveAtFirstBite.Slicing.Sliceable
-  maxCuts: 8
-  cutsSoFar: 0
 --- !u!1001 &1401352534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7225,31 +7108,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2824538750231192793, guid: 47e22f58c1e244d498ae5f1c1bda7102, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1821956376}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47e22f58c1e244d498ae5f1c1bda7102, type: 3}
 --- !u!4 &1821956373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3204618635866504803, guid: 47e22f58c1e244d498ae5f1c1bda7102, type: 3}
   m_PrefabInstance: {fileID: 1821956372}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1821956376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710568403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79cfbdbe864ca434b80c326b74a4e176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: LoveAtFirstBite.Runtime::Cookable
-  m_Kind: 1
-  m_Profile: {fileID: 11400000, guid: 5b82802525f63734d97a2aae3925f1b2, type: 2}
-  m_TargetRenderer: {fileID: 0}
 --- !u!1 &1848918099
 GameObject:
   m_ObjectHideFlags: 0
@@ -7924,30 +7789,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6452987395473004570, guid: 7d0d441352464f848b286963f313abfc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2016995562}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d0d441352464f848b286963f313abfc, type: 3}
 --- !u!4 &2016995556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5964539918679900832, guid: 7d0d441352464f848b286963f313abfc, type: 3}
   m_PrefabInstance: {fileID: 2016995555}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2016995562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826500442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bbe56b96d551f34fbce786d36908e46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: LoveAtFirstBite.Runtime::LoveAtFirstBite.Slicing.Sliceable
-  maxCuts: 8
-  cutsSoFar: 0
 --- !u!1001 &2019316602
 PrefabInstance:
   m_ObjectHideFlags: 0
