@@ -35,6 +35,19 @@ public class Cookable : MonoBehaviour
         Initialize();
     }
 
+    /// <summary>
+    /// Copies an existing cook progress onto this instance (used when an item is split by the
+    /// knife, so each half keeps the state it was cut at instead of resetting to Raw).
+    /// </summary>
+    public void AdoptState(CookState state, float heatSeconds)
+    {
+        Initialize();
+        m_State = state;
+        m_HeatSeconds = heatSeconds;
+        ApplyMaterial();
+        OnStateChanged?.Invoke(m_State);
+    }
+
     void Initialize()
     {
         if (m_Initialized) return;

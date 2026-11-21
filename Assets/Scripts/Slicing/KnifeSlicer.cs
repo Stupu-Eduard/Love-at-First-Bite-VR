@@ -114,6 +114,13 @@ namespace LoveAtFirstBite.Slicing
             // Slice object is whichever GameObject actually holds the MeshFilter.
             var sliceObject = mf.gameObject;
 
+            // Capture the slice object's world pose so the halves can be placed exactly there
+            // (the clone's inherited LOCAL transform can land at the wrong spot, e.g. world origin,
+            // when the mesh sits on a nested-prefab child).
+            Vector3 worldPos = sliceObject.transform.position;
+            Quaternion worldRot = sliceObject.transform.rotation;
+            Vector3 worldScale = sliceObject.transform.lossyScale;
+
             // Build the slice plane: origin = knife position, normal = knife's blade axis.
             Vector3 normal = bladeNormalAxis switch
             {
@@ -143,8 +150,8 @@ namespace LoveAtFirstBite.Slicing
                 return;
             }
 
-            SetUpHalf(result.top, sliceable, normal);
-            SetUpHalf(result.bottom, sliceable, -normal);
+            SetUpHalf(result.top, sliceable, normal, worldPos, worldRot, worldScale);
+            SetUpHalf(result.bottom, sliceable, -normal, worldPos, worldRot, worldScale);
 
             if (debugLog)
             {
@@ -161,60 +168,123 @@ namespace LoveAtFirstBite.Slicing
             var mr = half.GetComponentInChildren<MeshRenderer>();
             var mf = half.GetComponentInChildren<MeshFilter>();
             int verts = (mf != null && mf.sharedMesh != null) ? mf.sharedMesh.vertexCount : -1;
+            var grab = half.GetComponentInChildren<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>(true);
+            var col = half.GetComponentInChildren<Collider>(true);
+            string grabInfo = grab == null ? "NO GRAB"
+                : $"grab on '{grab.gameObject.name}' enabled={grab.enabled} colliders={grab.colliders.Count} mgr={(grab.interactionManager != null)} layer={grab.gameObject.layer}";
+            string colInfo = col == null ? "NO COLLIDER"
+                : $"collider={col.GetType().Name} on '{col.gameObject.name}' enabled={col.enabled} isTrigger={col.isTrigger} convex={(col is MeshCollider m ? m.convex.ToString() : "n/a")}";
             Debug.Log($"[KnifeSlicer] Half '{half.name}': active={half.activeInHierarchy} pos={half.transform.position} " +
-                      $"scale={half.transform.lossyScale} renderer={(mr != null && mr.enabled)} verts={verts} parent={(half.transform.parent ? half.transform.parent.name : "none")}", half);
+                      $"scale={half.transform.lossyScale} renderer={(mr != null && mr.enabled)} verts={verts}\n    {grabInfo}\n    {colInfo}", half);
         }
 
-        void SetUpHalf(GameObject half, Sliceable original, Vector3 pushDir)
+        void SetUpHalf(GameObject halfMesh, Sliceable original, Vector3 pushDir, Vector3 worldPos, Quaternion worldRot, Vector3 worldScale)
         {
-            half.name = original.name + "_Half";
-            half.SetActive(true);
+            // halfMesh is the bare sliced clone (mesh only, missing the ingredient's root
+            // components when the mesh lived on a child). Build the real piece by cloning the
+            // ORIGINAL ingredient root (which carries XRGrabInteractable, Cookable, Sliceable,
+            // Rigidbody with their exact settings) and transplanting the sliced mesh into it.
+            var piece = Instantiate(original.gameObject);
+            piece.name = original.name + "_Half";
+            piece.SetActive(true);
+            piece.transform.SetParent(original.transform.parent, true);
+            piece.transform.position = worldPos;
+            piece.transform.rotation = worldRot;
 
-            // Keep the half in the same place in the hierarchy as the original.
-            half.transform.SetParent(original.transform.parent, true);
+            // Match the original's world scale (convert to local, accounting for the parent).
+            Transform p = piece.transform.parent;
+            if (p != null)
+            {
+                Vector3 ps = p.lossyScale;
+                piece.transform.localScale = new Vector3(
+                    ps.x != 0f ? worldScale.x / ps.x : worldScale.x,
+                    ps.y != 0f ? worldScale.y / ps.y : worldScale.y,
+                    ps.z != 0f ? worldScale.z / ps.z : worldScale.z);
+            }
+            else piece.transform.localScale = worldScale;
 
-            // The half is a CLONE of the original, so it already has the Cookable and
-            // XRGrabInteractable. We keep those so halves stay grabbable and cookable.
-            // Only the collider must be rebuilt, because the old one doesn't match the new mesh.
-            foreach (var c in half.GetComponentsInChildren<Collider>(true))
+            // Transplant the sliced mesh (+ its material) from the bare half onto the piece's mesh renderer.
+            var slicedMf = halfMesh.GetComponentInChildren<MeshFilter>();
+            var slicedMr = halfMesh.GetComponentInChildren<MeshRenderer>();
+            var pieceMf = piece.GetComponentInChildren<MeshFilter>();
+            var pieceMr = piece.GetComponentInChildren<MeshRenderer>();
+            if (slicedMf != null && pieceMf != null)
+                pieceMf.sharedMesh = slicedMf.sharedMesh;
+            if (slicedMr != null && pieceMr != null)
+                pieceMr.sharedMaterials = slicedMr.sharedMaterials;
+
+            // The bare sliced clone is no longer needed.
+            Destroy(halfMesh);
+
+            // Rebuild the collider on whichever object holds the mesh, to fit the new half mesh.
+            var meshGO = pieceMf != null ? pieceMf.gameObject : piece;
+            foreach (var c in piece.GetComponentsInChildren<Collider>(true))
                 Destroy(c);
 
-            // Build a convex collider that fits the new half mesh (box fallback if cooking fails).
-            var newMf = half.GetComponentInChildren<MeshFilter>();
             Collider halfCollider = null;
-            if (newMf != null && newMf.sharedMesh != null)
+            if (pieceMf != null && pieceMf.sharedMesh != null)
             {
-                var mc = half.AddComponent<MeshCollider>();
-                mc.sharedMesh = newMf.sharedMesh;
-                mc.convex = true;
-                halfCollider = mc;
+                try
+                {
+                    var mc = meshGO.AddComponent<MeshCollider>();
+                    mc.sharedMesh = pieceMf.sharedMesh;
+                    mc.convex = true;
+                    halfCollider = mc;
+                }
+                catch { halfCollider = null; }
             }
             if (halfCollider == null)
-                halfCollider = half.AddComponent<BoxCollider>();
+            {
+                var box = meshGO.AddComponent<BoxCollider>();
+                if (pieceMf != null && pieceMf.sharedMesh != null)
+                {
+                    box.center = pieceMf.sharedMesh.bounds.center;
+                    box.size = pieceMf.sharedMesh.bounds.size;
+                }
+                halfCollider = box;
+            }
 
-            var rb = half.GetComponent<Rigidbody>();
-            if (rb == null) rb = half.AddComponent<Rigidbody>();
+            // Ensure a dynamic Rigidbody (clone already has one; make sure it's set up for falling/physics).
+            var rb = piece.GetComponent<Rigidbody>();
+            if (rb == null) rb = piece.AddComponent<Rigidbody>();
             rb.isKinematic = false;
             rb.useGravity = true;
             rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
             rb.interpolation = RigidbodyInterpolation.Interpolate;
 
-            // Re-point the grab interactable's collider list at the new collider so grabbing works.
-            var grab = half.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+            // Point the (inherited) grab interactable at the new collider so grabbing works.
+            var grab = piece.GetComponentInChildren<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>(true);
             if (grab != null)
             {
                 grab.colliders.Clear();
                 grab.colliders.Add(halfCollider);
                 grab.trackScale = false;
+
+                // XRI registers an interactable's colliders with the Interaction Manager during
+                // OnEnable. Since we changed the collider list after the clone was enabled, toggle
+                // the component so it re-registers the new collider; otherwise the manager's
+                // collider->interactable lookup misses it and the piece can't be grabbed.
+                if (grab.isActiveAndEnabled)
+                {
+                    grab.enabled = false;
+                    grab.enabled = true;
+                }
             }
 
+            // Carry the cook state forward so a half cut from a cooked item stays cooked
+            // (Cookable's state is not serialized, so the clone would otherwise reset to Raw).
+            var originalCookable = original.GetComponent<Cookable>();
+            var pieceCookable = piece.GetComponent<Cookable>();
+            if (originalCookable != null && pieceCookable != null)
+                pieceCookable.AdoptState(originalCookable.State, originalCookable.HeatSeconds);
+
             // Carry the cut budget forward so halves can be cut again up to the limit.
-            var s = half.GetComponent<Sliceable>();
-            if (s == null) s = half.AddComponent<Sliceable>();
+            var s = piece.GetComponent<Sliceable>();
+            if (s == null) s = piece.AddComponent<Sliceable>();
             s.maxCuts = original.maxCuts;
             s.cutsSoFar = original.cutsSoFar + 1;
 
-            // Nudge the halves apart so the cut reads and they don't overlap-jam.
+            // Gentle separation so the cut reads without flinging the piece off-screen.
             rb.AddForce(pushDir * separationImpulse, ForceMode.Impulse);
         }
 
