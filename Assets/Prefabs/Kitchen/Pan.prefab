@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 6091596844110393143}
   - component: {fileID: 6903022261061863139}
   - component: {fileID: 3043327550990577327}
+  - component: {fileID: 5719283640127385501}
   m_Layer: 0
   m_Name: Pan
   m_TagString: Untagged
@@ -490,6 +491,28 @@ MonoBehaviour:
   m_Contents: {fileID: 7286128069694926168}
   m_HeatSensor: {fileID: 4878064521052450719}
   m_MaxStickSpeed: 0.35
+--- !u!114 &5719283640127385501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6719449043932882156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c1e5b0a93d84f6aa2d4e8b1f60c3a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LoveAtFirstBite.Runtime::PanSnap
+  m_CaptureRadius: 0.15
+  m_MaxHeightAbove: 0.25
+  m_MaxHeightBelow: 0.05
+  m_MaxSpeed: 1.5
+  m_MaxAngularSpeed: 6
+  m_MaxTilt: 40
+  m_SettleDelay: 0.1
+  m_Duration: 0.15
+  m_SurfaceTolerance: 0.06
+  m_Clearance: 0.002
 --- !u!1 &6866533470962815907
 GameObject:
   m_ObjectHideFlags: 0
