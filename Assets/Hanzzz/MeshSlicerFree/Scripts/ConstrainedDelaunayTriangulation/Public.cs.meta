@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 350bf6b18868b4cc399c57b0670f90d2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283149
+  packageName: Mesh Slicer - Free
+  packageVersion: 2.1.0
+  assetPath: Assets/Hanzzz/MeshSlicerFree/Scripts/ConstrainedDelaunayTriangulation/Public.cs
+  uploadId: 707288
