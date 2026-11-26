@@ -151,8 +151,8 @@ public static class BuildTutorial
         ui.legend = BuildLegend(panel);
         ui.legend.SetActive(false);
 
-        // Continue button (shown only on Manual steps).
-        ui.continueBtn = CreateButton("ContinueButton", panel, "CONTINUE",
+        // Continue/Next button (always available as a fallback; auto-advance fires first).
+        ui.continueBtn = CreateButton("ContinueButton", panel, "NEXT",
             new Vector2(130f, -130f), new Vector2(230f, 72f), BtnNormal, BtnHighlight, BtnPressed, 34);
         ui.continueButton = ui.continueBtn.gameObject;
 
