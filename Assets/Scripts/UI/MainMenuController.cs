@@ -5,19 +5,19 @@ using UnityEngine.SceneManagement;
 /// Drives the start menu. Wired by the editor builder (Tools > Love at First Bite > Build Main Menu)
 /// to the Play Game and Tutorial buttons.
 ///
-/// - Play Game: loads the gameplay scene (the current SampleScene) by name.
-/// - Tutorial:  for now only swaps the menu root for a placeholder panel. The real tutorial
-///   comes later; BackToMenu() returns to the buttons.
+/// Both buttons load the same gameplay scene. The difference is TutorialSession.StartInTutorial:
+///  - Play Game: false -> normal play, the tutorial overlay stays dormant.
+///  - Tutorial:  true  -> the TutorialManager in the scene runs the guided overlay.
 /// </summary>
 public class MainMenuController : MonoBehaviour
 {
-    [Tooltip("Name of the gameplay scene loaded by Play Game. Must be in Build Settings.")]
+    [Tooltip("Name of the gameplay scene loaded by both buttons. Must be in Build Settings.")]
     [SerializeField] string m_GameplaySceneName = "SampleScene";
 
-    [Tooltip("Root holding the menu buttons. Hidden while the tutorial placeholder is shown.")]
+    [Tooltip("Optional: root holding the menu buttons.")]
     [SerializeField] GameObject m_MenuRoot;
 
-    [Tooltip("Placeholder panel shown by Tutorial. Empty for now.")]
+    [Tooltip("Unused legacy placeholder; kept so older scene references don't break.")]
     [SerializeField] GameObject m_TutorialPanel;
 
     void Awake()
@@ -26,8 +26,21 @@ public class MainMenuController : MonoBehaviour
         if (m_MenuRoot != null) m_MenuRoot.SetActive(true);
     }
 
-    /// <summary>Loads the gameplay scene. Hooked to the Play Game button.</summary>
+    /// <summary>Loads the gameplay scene for normal play. Hooked to the Play Game button.</summary>
     public void PlayGame()
+    {
+        TutorialSession.StartInTutorial = false;
+        LoadGameplay();
+    }
+
+    /// <summary>Loads the gameplay scene with the guided tutorial on. Hooked to the Tutorial button.</summary>
+    public void OpenTutorial()
+    {
+        TutorialSession.StartInTutorial = true;
+        LoadGameplay();
+    }
+
+    void LoadGameplay()
     {
         if (string.IsNullOrEmpty(m_GameplaySceneName))
         {
@@ -37,14 +50,7 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene(m_GameplaySceneName);
     }
 
-    /// <summary>Shows the (empty) tutorial placeholder. Hooked to the Tutorial button.</summary>
-    public void OpenTutorial()
-    {
-        if (m_MenuRoot != null) m_MenuRoot.SetActive(false);
-        if (m_TutorialPanel != null) m_TutorialPanel.SetActive(true);
-    }
-
-    /// <summary>Returns from the tutorial placeholder to the menu buttons.</summary>
+    /// <summary>Kept for the old placeholder's Back button; harmless if that panel is gone.</summary>
     public void BackToMenu()
     {
         if (m_TutorialPanel != null) m_TutorialPanel.SetActive(false);
