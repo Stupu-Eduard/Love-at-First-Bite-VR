@@ -2892,6 +2892,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 662187202}
+  - {fileID: 1610360675}
   m_Father: {fileID: 506772779}
   m_LocalEulerAnglesHint: {x: 0, y: -177.367, z: 0}
 --- !u!54 &787251126
@@ -2995,11 +2996,11 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1610360675}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
-  m_MatchAttachRotation: 1
+  m_MatchAttachRotation: 0
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
@@ -3105,11 +3106,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: LoveAtFirstBite.Runtime::LoveAtFirstBite.Slicing.KnifeSlicer
   requireSwipe: 1
-  minSwipeSpeed: 1.2
+  minSwipeSpeed: 0.8
   debugLog: 1
   bladeNormalAxis: 0
   cutFaceMaterial: {fileID: 0}
-  separationImpulse: 0.1
 --- !u!1 &798767216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6452987395473004570, guid: c5a9e521ee37404488bb7ab030e4a02b, type: 3}
@@ -7532,6 +7532,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547463439}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1610360674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1610360675}
+  m_Layer: 0
+  m_Name: AttachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1610360675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610360674}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.64929086, z: -0, w: 0.7605402}
+  m_LocalPosition: {x: -0.004, y: 0, z: -0.0249}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 787251125}
+  m_LocalEulerAnglesHint: {x: 0, y: -80.976, z: 0}
 --- !u!4 &1625014865 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2705008711589500444, guid: 19039a4577cb54748807667172c13ca4, type: 3}
@@ -8046,6 +8077,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5933022212947695046, guid: 47e22f58c1e244d498ae5f1c1bda7102, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 146ae6b1b54e8f741a9966aa47478e87, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
