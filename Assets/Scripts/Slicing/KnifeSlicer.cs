@@ -38,8 +38,6 @@ namespace LoveAtFirstBite.Slicing
         [Header("Cut result")]
         [Tooltip("Material applied to the freshly exposed cut face. Leave empty to reuse the food's own material.")]
         public Material cutFaceMaterial;
-        [Tooltip("Push the two halves apart by this impulse so the cut reads clearly.")]
-        public float separationImpulse = 0.4f;
 
         readonly MeshSlicer m_slicer = new MeshSlicer();
         Rigidbody m_rb;
@@ -191,6 +189,11 @@ namespace LoveAtFirstBite.Slicing
             piece.transform.position = worldPos;
             piece.transform.rotation = worldRot;
 
+            // Nudge each half a hair along the cut normal so the two halves' colliders don't
+            // spawn perfectly overlapping (which makes physics violently shove them apart).
+            // This is a position offset, not a force, so the pieces stay put instead of jumping.
+            piece.transform.position += pushDir.normalized * 0.005f;
+
             // Match the original's world scale (convert to local, accounting for the parent).
             Transform p = piece.transform.parent;
             if (p != null)
@@ -284,8 +287,10 @@ namespace LoveAtFirstBite.Slicing
             s.maxCuts = original.maxCuts;
             s.cutsSoFar = original.cutsSoFar + 1;
 
-            // Gentle separation so the cut reads without flinging the piece off-screen.
-            rb.AddForce(pushDir * separationImpulse, ForceMode.Impulse);
+            // Make the halves rest in place like a normal ingredient: no launch impulse, and
+            // clear any inherited/spawn velocity so they don't jump when the collider appears.
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
 
         // Turn a Unity Plane into three points on it, matching the MeshSlicer sample.
